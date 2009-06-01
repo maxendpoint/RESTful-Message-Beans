@@ -1,0 +1,28 @@
+<h1>Editing listener</h1>
+
+<% form_for(@listener) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :broker_url %><br />
+    <%= f.text_field :broker_url %>
+  </p>
+  <p>
+    <%= f.label :action_url %><br />
+    <%= f.text_field :action_url %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @listener %> |
+<%= link_to 'Back', listeners_path %>

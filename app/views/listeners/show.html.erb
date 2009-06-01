@@ -1,0 +1,23 @@
+<p>
+  <b>Broker url:</b>
+  <%=h @listener.broker_url %>
+</p>
+
+<p>
+  <b>Action url:</b>
+  <%=h @listener.action_url %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @listener.user %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @listener.password %>
+</p>
+
+
+<%= link_to 'Edit', edit_listener_path(@listener) %> |
+<%= link_to 'Back', listeners_path %>

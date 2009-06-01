@@ -1,0 +1,28 @@
+<h1>Listing listeners</h1>
+
+<table>
+  <tr>
+    <th>Broker url</th>
+    <th>Action url</th>
+    <th>User</th>
+    <th>Password</th>
+  </tr>
+
+<% @listeners.each do |listener| %>
+  <tr>
+    <td><%=h listener.broker_url %></td>
+    <td><%=h listener.action_url %></td>
+    <td><%=h listener.user %></td>
+    <td><%=h listener.password %></td>
+    <td><%= link_to 'Stop', { :controller => listener, :action => 'stop' } %></td>
+    <td><%= link_to 'Start', { :controller => listener, :action => 'start' } %></td>
+    <td><%= link_to 'Show', listener %></td>
+    <td><%= link_to 'Edit', edit_listener_path(listener) %></td>
+    <td><%= link_to 'Destroy', listener, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New listener', new_listener_path %>
