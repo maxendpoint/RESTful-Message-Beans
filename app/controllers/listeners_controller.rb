@@ -84,12 +84,14 @@ class ListenersController < ApplicationController
   end
   
   def start
-     @listener = Listener.find(params[:id])
-     @listener.start_daemon
-     index
+    debugger
+    @listener = Listener.find(params[:id])
+    @listener.start_daemon
+    index
   end
   
   def stop
+    debugger
     @listener = Listener.find(params[:id])
     @listener.start_daemon
     index

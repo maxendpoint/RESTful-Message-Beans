@@ -14,8 +14,8 @@
     <td><%=h listener.action_url %></td>
     <td><%=h listener.user %></td>
     <td><%=h listener.password %></td>
-    <td><%= link_to 'Stop', { :controller => listener, :action => 'stop' } %></td>
-    <td><%= link_to 'Start', { :controller => listener, :action => 'start' } %></td>
+    <td><%= link_to 'Stop', { :controller => 'listener', :action => 'stop', :id => listener.id } %></td>
+    <td><%= link_to 'Start', { :controller => 'listener', :action => 'start', :id => listener.id } %></td>
     <td><%= link_to 'Show', listener %></td>
     <td><%= link_to 'Edit', edit_listener_path(listener) %></td>
     <td><%= link_to 'Destroy', listener, :confirm => 'Are you sure?', :method => :delete %></td>
