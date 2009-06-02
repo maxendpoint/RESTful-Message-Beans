@@ -4,9 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :messages
 
   map.resources :listeners
-  map.connect 'listeners/:id', :controller => 'listener', :action => 'stop'
-  map.connect 'listeners/:id', :controller => 'listener', :action => 'start'
-  
+    
 
   # The priority is based upon order of creation: first created -> highest priority.
 

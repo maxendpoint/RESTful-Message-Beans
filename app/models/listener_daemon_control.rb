@@ -68,5 +68,5 @@ require 'daemons'
     end
     
     target = "#{ARGV[2]}/app/models/listener_daemon.rb"
-    logger.info "Launching #{target}..."
+    logger.info "Launching #{target}...\n"
     Daemons.run(target, options)

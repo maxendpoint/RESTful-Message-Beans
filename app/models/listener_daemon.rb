@@ -15,7 +15,7 @@ require 'stomp'
 # Start the logger
 #
   logger = Logger.new("#{ARGV[0]}/log/#{ARGV[1]}.log")
-  logger.info "Starting #{ARGV[1]}..."
+  logger.info "\nStarting #{ARGV[1]}..."
 
 #
 # Process parameters

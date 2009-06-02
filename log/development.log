@@ -2678,3 +2678,982 @@ Rendering template within layouts/listeners
 Rendering listeners/index
   [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
 Completed in 64ms (View: 21, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:19:23) [GET]
+  [4;36;1mListener Load (1.7ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 439ms (View: 104, DB: 4) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:49:00) [GET]
+  [4;36;1mListener Load (0.9ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 275ms (View: 56, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:49:22) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.6ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6132960180.800500789769009', '2009-06-02 15:49:22', '2009-06-02 15:49:22', '04b7cec71026b19b3e81175f49a81d39dc5b4c85')[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.6ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:49:22', `status` = 'running' WHERE `id` = 1[0m
+  [4;36;1mSQL (36.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 630ms (DB: 47) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:49:23) [GET]
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 64ms (View: 20, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:49:26) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"2"}
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_2', '-6116140680.851974645420664', '2009-06-02 15:49:26', '2009-06-02 15:49:26', '23c9337f4a98ec93695950ffd242790121cc19e6')[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.7ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:49:26', `status` = 'running' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 662ms (DB: 13) | 302 Found [http://localhost/daemon/start/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:49:26) [GET]
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 64ms (View: 20, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#show (for 127.0.0.1 at 2009-06-02 08:49:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+Rendering template within layouts/listeners
+Rendering listeners/show
+Completed in 67ms (View: 19, DB: 2) | 200 OK [http://localhost/listeners/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:49:36) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 63ms (View: 20, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#edit (for 127.0.0.1 at 2009-06-02 08:49:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+Rendering template within layouts/listeners
+Rendering listeners/edit
+Completed in 71ms (View: 27, DB: 3) | 200 OK [http://localhost/listeners/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:49:48) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 63ms (View: 20, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#new (for 127.0.0.1 at 2009-06-02 08:49:55) [GET]
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Rendering template within layouts/listeners
+Rendering listeners/new
+Completed in 67ms (View: 23, DB: 2) | 200 OK [http://localhost/listeners/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#create (for 127.0.0.1 at 2009-06-02 08:50:08) [POST]
+  Parameters: {"commit"=>"Create", "listener"=>{"broker_url"=>"bubba", "action_url"=>"hubba"}, "authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g="}
+  [4;35;1mListener Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Create (0.5ms)[0m   [0mINSERT INTO `listeners` (`broker_url`, `created_at`, `updated_at`, `status`, `user`, `password`, `action_url`) VALUES('bubba', '2009-06-02 15:50:08', '2009-06-02 15:50:08', NULL, NULL, NULL, 'hubba')[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners/3
+Completed in 63ms (DB: 5) | 302 Found [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#show (for 127.0.0.1 at 2009-06-02 08:50:08) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+Rendering template within layouts/listeners
+Rendering listeners/show
+Completed in 55ms (View: 9, DB: 2) | 200 OK [http://localhost/listeners/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:50:20) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#show (for 127.0.0.1 at 2009-06-02 08:50:25) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+Rendering template within layouts/listeners
+Rendering listeners/show
+Completed in 55ms (View: 9, DB: 2) | 200 OK [http://localhost/listeners/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#edit (for 127.0.0.1 at 2009-06-02 08:50:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+Rendering template within layouts/listeners
+Rendering listeners/edit
+Completed in 60ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners/3/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:50:34) [GET]
+  [4;35;1mListener Load (0.3ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 23, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:51:38) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"3"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_3') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_3') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_3', '-6136150380.634175645144792', '2009-06-02 15:51:38', '2009-06-02 15:51:38', 'c46d953eb14581e5ee66983145b99dd91ab8d561')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:51:38', `user` = 'listener_daemon_3', `status` = 'running', `password` = 'big_deal' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 515ms (DB: 9) | 302 Found [http://localhost/daemon/start/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:51:39) [GET]
+  [4;36;1mListener Load (0.7ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 71ms (View: 25, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 08:51:41) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"3"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_3') LIMIT 1[0m
+  [4;36;1mUser Delete all (4.6ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (3)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.5ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:51:42', `status` = 'stopped' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 509ms (DB: 11) | 302 Found [http://localhost/daemon/stop/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:51:42) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 69ms (View: 25, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 08:51:44) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"2"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;36;1mUser Delete all (3.1ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (2)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:51:44', `status` = 'stopped' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 505ms (DB: 9) | 302 Found [http://localhost/daemon/stop/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:51:44) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:51:45) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"2"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_2') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_2', '-6134658280.481820778540485', '2009-06-02 15:51:45', '2009-06-02 15:51:45', '1e6248242caf200e106f56d6f8a0bc488e97d99e')[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (1.0ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:51:46', `status` = 'running' WHERE `id` = 2[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 468ms (DB: 12) | 302 Found [http://localhost/daemon/start/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:51:46) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:51:47) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"3"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_3') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_3') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_3', '-6117479780.622486859136545', '2009-06-02 15:51:48', '2009-06-02 15:51:48', 'b7a2464cec552d727054b51b618c864cb8d8f39f')[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:51:48', `status` = 'running' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 519ms (DB: 10) | 302 Found [http://localhost/daemon/start/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:51:48) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 69ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#show (for 127.0.0.1 at 2009-06-02 08:51:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mListener Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+Rendering template within layouts/listeners
+Rendering listeners/show
+Completed in 59ms (View: 9, DB: 3) | 200 OK [http://localhost/listeners/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:51:54) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 67ms (View: 24, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#show (for 127.0.0.1 at 2009-06-02 08:52:03) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+Rendering template within layouts/listeners
+Rendering listeners/show
+Completed in 57ms (View: 9, DB: 3) | 200 OK [http://localhost/listeners/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:52:06) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 69ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#edit (for 127.0.0.1 at 2009-06-02 08:52:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+Rendering template within layouts/listeners
+Rendering listeners/edit
+Completed in 70ms (View: 26, DB: 2) | 200 OK [http://localhost/listeners/3/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:52:13) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 24, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 08:52:18) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"3"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_3') LIMIT 1[0m
+  [4;36;1mUser Delete all (6.4ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (5)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.5ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:52:19', `status` = 'stopped' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 508ms (DB: 12) | 302 Found [http://localhost/daemon/stop/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:52:19) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 67ms (View: 23, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 08:52:20) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"2"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;36;1mUser Delete all (3.2ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (4)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:52:20', `status` = 'stopped' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 504ms (DB: 9) | 302 Found [http://localhost/daemon/stop/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:52:20) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 67ms (View: 23, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 08:52:21) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (3.8ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (1)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:52:22', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 477ms (DB: 10) | 302 Found [http://localhost/daemon/stop/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:52:22) [GET]
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 70ms (View: 25, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:55:57) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 252ms (View: 54, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:56:03) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6130576080.537643099649967', '2009-06-02 15:56:03', '2009-06-02 15:56:03', 'bfc0c91327a09003019116f5924eab32520d6807')[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.6ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:56:03', `status` = 'running' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 520ms (DB: 11) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:56:04) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 67ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:56:08) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"2"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_2', '-6114219780.104680982226428', '2009-06-02 15:56:08', '2009-06-02 15:56:08', 'c6f8b7bc7df9e8412b160c75d696202b610f0f20')[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:56:08', `status` = 'running' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 519ms (DB: 11) | 302 Found [http://localhost/daemon/start/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:56:09) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 85ms (View: 35, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:56:10) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"3"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_3') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_3') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_3', '-6124131080.619186468608372', '2009-06-02 15:56:10', '2009-06-02 15:56:10', '6dda27f347d9cbebf73e21cbdf49b3cc38ec39f7')[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.6ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:56:10', `status` = 'running' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 514ms (DB: 12) | 302 Found [http://localhost/daemon/start/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:56:11) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 70ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 08:57:20) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"3"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_3') LIMIT 1[0m
+  [4;35;1mUser Delete all (4.9ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (8)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.6ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:57:20', `status` = 'stopped' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 512ms (DB: 11) | 302 Found [http://localhost/daemon/stop/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:57:20) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 08:57:22) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"2"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mUser Delete all (3.4ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (7)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.6ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:57:22', `status` = 'stopped' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 508ms (DB: 10) | 302 Found [http://localhost/daemon/stop/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:57:22) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 69ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 08:57:24) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (4.3ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (6)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.6ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:57:24', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 512ms (DB: 10) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:57:24) [GET]
+  [4;35;1mListener Load (0.7ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 69ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:57:30) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"2"}
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_2', '-6128489980.391555808532296', '2009-06-02 15:57:30', '2009-06-02 15:57:30', '556a3e9266944d2e929e5fe42e57e7d0e84bec22')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.9ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:57:30', `status` = 'running' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 469ms (DB: 9) | 302 Found [http://localhost/daemon/start/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:57:31) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:57:33) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6132956480.288824771481556', '2009-06-02 15:57:33', '2009-06-02 15:57:33', '4cae4d3c168e1c638cfad7176932e51e589a8373')[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.8ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:57:34', `status` = 'running' WHERE `id` = 1[0m
+  [4;36;1mSQL (9.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 530ms (DB: 23) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:57:34) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 214ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 08:57:37) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"3"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_3') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_3') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_3', '-6118252480.0216684087722357', '2009-06-02 15:57:37', '2009-06-02 15:57:37', '3fab0a780f5956ac6f9bac45517bfef9e69012b9')[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (1.4ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 15:57:38', `status` = 'running' WHERE `id` = 3[0m
+  [4;35;1mSQL (14.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 535ms (DB: 25) | 302 Found [http://localhost/daemon/start/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 08:57:38) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 09:08:19) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (6.2ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (10)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.5ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 16:08:20', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 507ms (DB: 12) | 302 Found [http://localhost/daemon/stop/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 09:08:20) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 69ms (View: 25, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 09:08:21) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"2"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;36;1mUser Delete all (3.0ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (9)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 16:08:22', `status` = 'stopped' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 512ms (DB: 9) | 302 Found [http://localhost/daemon/stop/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 09:08:22) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 25, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 09:08:25) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"3"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_3') LIMIT 1[0m
+  [4;36;1mUser Delete all (4.2ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (11)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 16:08:25', `status` = 'stopped' WHERE `id` = 3[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 511ms (DB: 10) | 302 Found [http://localhost/daemon/stop/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 09:08:25) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 09:09:13) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6124453980.510386693108677', '2009-06-02 16:09:13', '2009-06-02 16:09:13', 'ca4ea24f0f1ce44c00dac3abe39fb82485dfa838')[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.6ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 16:09:14', `status` = 'running' WHERE `id` = 1[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 518ms (DB: 12) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 09:09:14) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 69ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 09:09:15) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"2"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_2', '-6129975180.277718084629977', '2009-06-02 16:09:15', '2009-06-02 16:09:15', '0325e46caa3eea3b9180ddfd2eeb0dc6d623708f')[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 16:09:15', `status` = 'running' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 464ms (DB: 10) | 302 Found [http://localhost/daemon/start/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 09:09:16) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-02 09:09:17) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"3"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_3') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_3') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_3', '-6134623380.307379441826785', '2009-06-02 16:09:17', '2009-06-02 16:09:17', '2802f6cd8e39439d8e8383b599e1641f231d3487')[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.7ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 16:09:18', `status` = 'running' WHERE `id` = 3[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 623ms (DB: 14) | 302 Found [http://localhost/daemon/start/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 09:09:18) [GET]
+  [4;35;1mListener Load (0.7ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 76ms (View: 25, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 09:10:48) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"3"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 3) [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_3') LIMIT 1[0m
+  [4;35;1mUser Delete all (3.4ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (14)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.4ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 16:10:49', `status` = 'stopped' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 499ms (DB: 9) | 302 Found [http://localhost/daemon/stop/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 09:10:49) [GET]
+  [4;35;1mListener Load (0.7ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 24, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 09:10:54) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"2"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mUser Delete all (2.5ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (13)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.5ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 16:10:55', `status` = 'stopped' WHERE `id` = 2[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 506ms (DB: 9) | 302 Found [http://localhost/daemon/stop/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 09:10:55) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 80ms (View: 34, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-02 09:10:56) [POST]
+  Parameters: {"authenticity_token"=>"TUqnWR1lAmA/46HuAM7uyvCTTyQ8+PUOvx503yPew5g=", "id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (2.9ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (12)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.5ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 16:10:57', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 504ms (DB: 9) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-02 09:10:57) [GET]
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 210ms (View: 24, DB: 2) | 200 OK [http://localhost/listeners]

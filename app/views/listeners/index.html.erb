@@ -2,22 +2,17 @@
 
 <table>
   <tr>
+    <th>Status</th>
     <th>Broker url</th>
     <th>Action url</th>
-    <th>User</th>
-    <th>Password</th>
   </tr>
 
 <% @listeners.each do |listener| %>
   <tr>
-    <td><%= button_to (listener.status == 'running' ? 'Stop' : 'Start') , 
-      { :controller => 'daemon', :action => (listener.status == 'running' ? 'stop' : 'start'), :id => listener.id } %></td>
+    <td><%= button_to button_caption(listener) , 
+      { :controller => 'daemon', :action => button_caption(listener).downcase, :id => listener.id } %></td>
     <td><%=h listener.broker_url %></td>
     <td><%=h listener.action_url %></td>
-    <td><%=h listener.user %></td>
-    <td><%=h listener.password %></td>
-    
-    
     <td><%= link_to 'Show', listener %></td>
     <td><%= link_to 'Edit', edit_listener_path(listener) %></td>
     <td><%= link_to 'Destroy', listener, :confirm => 'Are you sure?', :method => :delete %></td>
