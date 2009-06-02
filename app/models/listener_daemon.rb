@@ -32,6 +32,7 @@ require 'stomp'
 # Connect with broker
 #
 
+sleepInterval = 20
 #
 # Main process loop
 #
@@ -40,8 +41,8 @@ loop do
 #
 # Wait for message...
 #
-  logger.info "#{ARGV[1]} is snoozing..."
-  sleep 20
+  logger.info "#{ARGV[1]} is snoozing for #{sleepInterval} seconds..."
+  sleep sleepInterval
   logger.info "...Huh? What? Snort!"
 #
 # Deliver the message
