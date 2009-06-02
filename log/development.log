@@ -433,3 +433,2248 @@ Processing UsersController#show (for 127.0.0.1 at 2009-06-01 11:19:17) [GET]
 Rendering template within layouts/users
 Rendering users/show
 Completed in 42ms (View: 17, DB: 2) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-06-01 15:41:56) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 78ms (View: 57, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 15:42:06) [GET]
+
+MissingSourceFile (no such file to load -- YAML):
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  /home/kenb/ruby/gems/gems/ngrams-0.1.0/lib/ngrams/ngrams.rb:24
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  /home/kenb/ruby/gems/gems/ngrams-0.1.0/lib/ngrams.rb:2
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  app/models/listener.rb:3
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:437:in `load_missing_constant'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:96:in `const_missing'
+  app/controllers/listeners_controller.rb:5:in `index'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (311.9ms)
+Rendered rescues/_request_and_response (5.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 15:45:09) [GET]
+
+MissingSourceFile (no such file to load -- YAML):
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  /home/kenb/ruby/gems/gems/ngrams-0.1.0/lib/ngrams/ngrams.rb:24
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  /home/kenb/ruby/gems/gems/ngrams-0.1.0/lib/ngrams.rb:2
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:156:in `require'
+  app/models/listener.rb:3
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:437:in `load_missing_constant'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:96:in `const_missing'
+  app/controllers/listeners_controller.rb:5:in `index'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (178.0ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 15:46:50) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+Completed in 101ms (View: 32, DB: 1) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#new (for 127.0.0.1 at 2009-06-01 15:46:58) [GET]
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Rendering template within layouts/listeners
+Rendering listeners/new
+Completed in 69ms (View: 25, DB: 2) | 200 OK [http://localhost/listeners/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#create (for 127.0.0.1 at 2009-06-01 15:47:22) [POST]
+  Parameters: {"commit"=>"Create", "listener"=>{"broker_url"=>"broker-url", "password"=>"password", "user"=>"kenb", "action_url"=>"http://localhost:3000/listeners/update"}, "authenticity_token"=>"ISH93CbcG72BpHr+CtiPPn/5cXXoZmQ9Dsg6PlwLnP0="}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Create (0.6ms)[0m   [0;1mINSERT INTO `listeners` (`broker_url`, `created_at`, `updated_at`, `user`, `password`, `action_url`) VALUES('broker-url', '2009-06-01 22:47:22', '2009-06-01 22:47:22', 'kenb', 'password', 'http://localhost:3000/listeners/update')[0m
+  [4;35;1mSQL (6.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners/1
+Completed in 231ms (DB: 9) | 302 Found [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#show (for 127.0.0.1 at 2009-06-01 15:47:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.8ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+Rendering template within layouts/listeners
+Rendering listeners/show
+Completed in 63ms (View: 18, DB: 3) | 200 OK [http://localhost/listeners/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 15:47:27) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 62ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#start (for 127.0.0.1 at 2009-06-01 15:47:30) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/home/kenb/development/fulfill/app/controllers/daemon_controller.rb:14: syntax error, unexpected tASSOC, expecting '}'
+    redirect_to {:controller => 'listeners', :action => 'index' }
+                               ^
+/home/kenb/development/fulfill/app/controllers/daemon_controller.rb:14: syntax error, unexpected ',', expecting '}'
+    redirect_to {:controller => 'listeners', :action => 'index' }
+                                            ^):
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/inflector.rb:361:in `constantize'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/inflector.rb:360:in `each'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/inflector.rb:360:in `constantize'
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:439:in `recognize'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:432:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (127.0ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 15:52:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-06-01 16:08:00) [GET]
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 187ms (View: 149, DB: 4) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-01 16:08:21) [GET]
+
+ActionController::RoutingError (No route matches "/daemons" with {:method=>:get}):
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:437:in `recognize'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:432:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-01 16:08:32) [GET]
+
+ActionController::RoutingError (No route matches "/daemons/index" with {:method=>:get}):
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:437:in `recognize'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:432:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-06-01 16:09:50) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 35ms (View: 14, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 16:10:03) [GET]
+  [4;36;1mListener Load (1.1ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 546ms (View: 190, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 16:10:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.7ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+
+NameError (undefined local variable or method `status' for #<Listener:0xb71485e0>):
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:260:in `method_missing'
+  app/models/listener.rb:24:in `start_daemon'
+  app/controllers/daemon_controller.rb:6:in `start'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (135.2ms)
+Rendered rescues/_request_and_response (4.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mListener Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (8.2ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateListeners (20090528174803)
+  [4;35;1mSQL (5.2ms)[0m   [0mCREATE TABLE `listeners` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `status` varchar(255), `broker_url` varchar(255), `action_url` varchar(255), `user` varchar(255), `password` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090528174803')[0m
+Migrating to CreateMessages (20090528175615)
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE TABLE `messages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `body` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090528175615')[0m
+Migrating to CreateUsers (20090601180643)
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `hashed_password` varchar(255), `salt` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090601180643')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `listeners`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `listeners`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `messages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `messages`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-06-01 16:15:36) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 49ms (View: 30, DB: 1) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 16:15:43) [GET]
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+Completed in 224ms (View: 31, DB: 1) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#new (for 127.0.0.1 at 2009-06-01 16:15:46) [GET]
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Rendering template within layouts/listeners
+Rendering listeners/new
+Completed in 69ms (View: 27, DB: 2) | 200 OK [http://localhost/listeners/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#create (for 127.0.0.1 at 2009-06-01 16:15:56) [POST]
+  Parameters: {"commit"=>"Create", "listener"=>{"broker_url"=>"broker-url", "password"=>"password", "user"=>"kenb", "action_url"=>"http://localhost:3000/listeners/update"}, "authenticity_token"=>"RTKUWbrjrE8xQYmn13snF9EcrfYiUnaPlSshGpSRWak="}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Create (0.5ms)[0m   [0mINSERT INTO `listeners` (`broker_url`, `created_at`, `updated_at`, `status`, `user`, `password`, `action_url`) VALUES('broker-url', '2009-06-01 23:15:56', '2009-06-01 23:15:56', NULL, 'kenb', 'password', 'http://localhost:3000/listeners/update')[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners/1
+Completed in 245ms (DB: 8) | 302 Found [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#show (for 127.0.0.1 at 2009-06-01 16:15:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+Rendering template within layouts/listeners
+Rendering listeners/show
+Completed in 62ms (View: 18, DB: 2) | 200 OK [http://localhost/listeners/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 16:15:59) [GET]
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 58ms (View: 17, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 16:16:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+
+NameError (uninitialized constant Listener::Users):
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:105:in `const_missing'
+  app/models/listener.rb:52:in `delete_old_user'
+  app/models/listener.rb:26:in `start_daemon'
+  app/controllers/daemon_controller.rb:6:in `start'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (135.1ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 16:16:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+
+NameError (uninitialized constant Listener::PasswordGeneratory):
+  /home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:105:in `const_missing'
+  app/models/listener.rb:29:in `start_daemon'
+  app/controllers/daemon_controller.rb:6:in `start'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (292.3ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 16:17:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+
+NoMethodError (private method `load' called for :Dictionary:Symbol):
+  app/models/listener.rb:59:in `initialize'
+  app/models/listener.rb:29:in `new'
+  app/models/listener.rb:29:in `start_daemon'
+  app/controllers/daemon_controller.rb:6:in `start'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (129.7ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 16:19:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+
+NoMethodError (private method `load' called for :Dictionary:Symbol):
+  app/models/listener.rb:59:in `initialize'
+  app/models/listener.rb:29:in `new'
+  app/models/listener.rb:29:in `start_daemon'
+  app/controllers/daemon_controller.rb:6:in `start'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (131.9ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 16:19:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+
+NoMethodError (private method `load' called for :Dictionary:Symbol):
+  app/models/listener.rb:59:in `initialize'
+  app/models/listener.rb:29:in `new'
+  app/models/listener.rb:29:in `start_daemon'
+  app/controllers/daemon_controller.rb:6:in `start'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (133.6ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 16:19:49) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 240ms (View: 47, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 16:19:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+
+NoMethodError (private method `load' called for :Dictionary:Symbol):
+  app/models/listener.rb:59:in `initialize'
+  app/models/listener.rb:29:in `new'
+  app/models/listener.rb:29:in `start_daemon'
+  app/controllers/daemon_controller.rb:6:in `start'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+  /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+  /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+  /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (138.9ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 16:20:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.6ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6116838380.660237457001236', '2009-06-01 23:20:19', '2009-06-01 23:20:19', '3015e7a775323dcfa30c543be802ed365e580e26')[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-06-01 16:23:41) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 78ms (View: 56, DB: 3) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 16:23:52) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 244ms (View: 45, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 16:23:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (7.5ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (1)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6140809080.781854028881609', '2009-06-01 23:23:57', '2009-06-01 23:23:57', '1e9bf6da590e6416d069442827888560d6cb25da')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-06-01 16:25:36) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 92ms (View: 70, DB: 3) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 16:25:45) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 238ms (View: 44, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 16:25:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.8ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (3.5ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (2)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6136522780.230897850756111', '2009-06-01 23:26:49', '2009-06-01 23:26:49', '0fedf7f9b83573b99f05a026cab150fd9e6457ce')[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-06-01 17:49:14) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 85ms (View: 61, DB: 3) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:49:22) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 245ms (View: 45, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 17:49:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (3.7ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (3)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6136998280.547489081544958', '2009-06-02 00:49:40', '2009-06-02 00:49:40', '5b5e9ead76bd318c22c96162eaa424f2baf028b4')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 14151ms (DB: 11) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:49:40) [GET]
+  [4;35;1mListener Load (0.4ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 60ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 17:50:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (14.5ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (4)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6123446780.532415441482779', '2009-06-02 00:50:38', '2009-06-02 00:50:38', '589dee9f8481129499296f70b3b87956337093dc')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 12207ms (DB: 22) | 302 Found [http://localhost/daemon/stop/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:50:38) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 59ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:51:18) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 59ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 17:51:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (10.0ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (5)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6133664080.0246213844403984', '2009-06-02 00:52:16', '2009-06-02 00:52:16', 'e601f9d42fb2a7afd5ce663338996562f1fac596')[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 53707ms (DB: 23) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:52:17) [GET]
+  [4;35;1mListener Load (0.3ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 60ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 17:53:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+Redirected to http://localhost:3000/listeners
+Completed in 49ms (DB: 2) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:53:17) [GET]
+  [4;35;1mListener Load (0.3ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 60ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 17:53:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+Redirected to http://localhost:3000/listeners
+Completed in 49ms (DB: 2) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:53:30) [GET]
+  [4;35;1mListener Load (0.3ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 58ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 17:53:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+Redirected to http://localhost:3000/listeners
+Completed in 45059ms (DB: 2) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:54:42) [GET]
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 58ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:58:24) [GET]
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 58ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 17:58:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (7.1ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (6)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6137115580.277439161220616', '2009-06-02 00:58:52', '2009-06-02 00:58:52', '569fdf3c44e4d599407d86d7c3e3d2c01e2b14af')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 514ms (DB: 13) | 302 Found [http://localhost/daemon/start/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:58:53) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 61ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 17:59:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+Redirected to http://localhost:3000/listeners
+Completed in 34019ms (DB: 2) | 302 Found [http://localhost/daemon/stop/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 17:59:48) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 59ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 18:01:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (5.4ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (7)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6129377480.80595125909032', '2009-06-02 01:01:07', '2009-06-02 01:01:07', '93c0d5ecac50a9afecd131a2fa8c13bc515aa80b')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 464ms (DB: 14) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:01:07) [GET]
+  [4;35;1mListener Load (0.3ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 60ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 18:01:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+Redirected to http://localhost:3000/listeners
+Completed in 34976ms (DB: 2) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:01:57) [GET]
+  [4;35;1mListener Load (0.3ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 59ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:04:09) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 263ms (View: 63, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 18:04:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (3.1ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (8)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6131449480.175277038839403', '2009-06-02 01:04:32', '2009-06-02 01:04:32', 'efd05b219db720bc7b8d4197eff973aea851b6f4')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 515ms (DB: 10) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:04:32) [GET]
+  [4;35;1mListener Load (0.3ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 57ms (View: 15, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 18:04:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+Redirected to http://localhost:3000/listeners
+Completed in 56032ms (DB: 2) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:05:45) [GET]
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 59ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 18:08:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (2.2ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (9)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6122682980.374724541470541', '2009-06-02 01:08:43', '2009-06-02 01:08:43', '0f788fd3418eedfaf94c8497627cbf485813c90a')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 510ms (DB: 8) | 302 Found [http://localhost/daemon/start/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:08:44) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 59ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 18:09:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+Redirected to http://localhost:3000/listeners
+Completed in 318479ms (DB: 2) | 302 Found [http://localhost/daemon/stop/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 18:14:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (5.7ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (10)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6131920680.832886284318487', '2009-06-02 01:30:26', '2009-06-02 01:30:26', 'b64fa3586bab2d04344b1c4b1041dd7b65f5e977')[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 953052ms (DB: 17) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:30:27) [GET]
+  [4;35;1mListener Load (0.3ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 60ms (View: 16, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 18:32:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (4.9ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (11)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6115984780.169917395719666', '2009-06-02 01:36:10', '2009-06-02 01:36:10', 'a34c3f3d29c443b2b0eb6d315fb3e3a2d3041f80')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.8ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 01:36:10', `status` = '9' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 204319ms (DB: 13) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:36:10) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 62ms (View: 17, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 18:36:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (7.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (10.2ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (12)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:38:59) [GET]
+  [4;36;1mListener Load (0.3ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 248ms (View: 49, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 18:39:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (1.7ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6139303580.89399308507024', '2009-06-02 01:39:54', '2009-06-02 01:39:54', '5af748e220431626ce9643c04af3307303799b88')[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.7ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 01:39:54', `user` = 'listener_daemon_1', `status` = 'running', `password` = 'big_deal' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 50657ms (DB: 12) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:39:54) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 60ms (View: 16, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 18:40:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (2.7ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (13)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 590ms (DB: 8) | 302 Found [http://localhost/daemon/stop/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:40:44) [GET]
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 62ms (View: 17, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 18:42:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6132161380.0223479824647022', '2009-06-02 01:43:00', '2009-06-02 01:43:00', '8e3d40eecba25a23bf8bc8856e94f15a68f5eaf5')[0m
+  [4;35;1mSQL (4.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (1.7ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 01:43:00', `status` = 'running' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 6538ms (DB: 13) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:43:01) [GET]
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 61ms (View: 17, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 18:43:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (3.5ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (14)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.5ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 01:43:37', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 507ms (DB: 10) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 18:43:37) [GET]
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 61ms (View: 17, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-06-01 19:01:07) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 53ms (View: 32, DB: 4) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:01:14) [GET]
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+ERROR: compiling _run_erb_app47views47listeners47index46html46erb RAISED compile error
+/home/kenb/development/fulfill/app/views/listeners/index.html.erb:13: syntax error, unexpected '=', expecting ')'
+...tton_to <%= listener.status == 'running' ? 'Stop' : 'Start' ...
+                              ^
+Function body:           def _run_erb_app47views47listeners47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing listeners</h1>\n\n<table>\n  <tr>\n    <th>Broker url</th>\n    <th>Action url</th>\n    <th>User</th>\n    <th>Password</th>\n  </tr>\n\n"
+
+
+
+
+
+
+
+
+
+;  @listeners.each do |listener| ; @output_buffer.concat "\n  <tr>\n    <td>"
+
+; @output_buffer.concat(( button_to <%= listener.status == 'running' ? 'Stop' : 'Start' ).to_s); @output_buffer.concat " , \n      { :controller => 'daemon', :action => "
+; @output_buffer.concat(( listener.status == 'running' ? 'stop' : 'start' ).to_s); @output_buffer.concat ", :id => listener.id } %></td>\n    <td>"
+; @output_buffer.concat((h listener.broker_url ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h listener.action_url ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h listener.user ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h listener.password ).to_s); @output_buffer.concat "</td>\n    \n    \n    <td>"
+
+
+; @output_buffer.concat(( link_to 'Show', listener ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Edit', edit_listener_path(listener) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Destroy', listener, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>\n"
+
+;  end ; @output_buffer.concat "\n</table>\n\n<br />\n\n"
+
+
+
+
+; @output_buffer.concat(( link_to 'New listener', new_listener_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/kenb/development/fulfill/app/views/listeners/index.html.erb:34:in `compile!'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/kenb/development/fulfill/app/controllers/listeners_controller.rb:7:in `index'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/kenb/ruby/gems/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+/home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/home/kenb/ruby/gems/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/home/kenb/ruby/gems/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/home/kenb/ruby/gems/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/home/kenb/ruby/gems/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/home/kenb/ruby/gems/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/home/kenb/ruby/gems/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/home/kenb/ruby/gems/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/home/kenb/ruby/gems/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/home/kenb/ruby/gems/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/home/kenb/ruby/gems/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/home/kenb/ruby/gems/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/kenb/development/fulfill/app/views/listeners/index.html.erb:13: syntax error, unexpected '=', expecting ')'
+...tton_to <%= listener.status == 'running' ? 'Stop' : 'Start' ...
+                              ^) on line #13 of app/views/listeners/index.html.erb:
+10: 
+11: <% @listeners.each do |listener| %>
+12:   <tr>
+13:     <td><%= button_to <%= listener.status == 'running' ? 'Stop' : 'Start' %> , 
+14:       { :controller => 'daemon', :action => <%= listener.status == 'running' ? 'stop' : 'start' %>, :id => listener.id } %></td>
+15:     <td><%=h listener.broker_url %></td>
+16:     <td><%=h listener.action_url %></td>
+
+    app/views/listeners/index.html.erb:34:in `compile!'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/listeners_controller.rb:7:in `index'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /home/kenb/ruby/gems/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /home/kenb/ruby/gems/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/debugger.rb:17:in `call'
+    /home/kenb/ruby/gems/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /home/kenb/ruby/gems/gems/rails-2.3.2/lib/commands/server.rb:111
+
+Rendered rescues/_trace (174.8ms)
+Rendered rescues/_request_and_response (4.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:03:11) [GET]
+  [4;35;1mListener Load (0.2ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 68ms (View: 26, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 19:03:15) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.6ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6140789980.452541393838438', '2009-06-02 02:03:28', '2009-06-02 02:03:28', 'de908b238b6c4e7bd1d57e5b5314b8b72f5c9c43')[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:03:28', `status` = 'running' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 12953ms (DB: 10) | 302 Found [http://localhost/daemon/start/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:03:28) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 59ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 19:03:35) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (2.4ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (15)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.5ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:03:36', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 511ms (DB: 8) | 302 Found [http://localhost/daemon/stop/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:03:36) [GET]
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 61ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 19:03:42) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6134198780.413600557221321', '2009-06-02 02:04:18', '2009-06-02 02:04:18', '899e54c1920af35f1d8a0dc15a529edefcb7dc61')[0m
+  [4;35;1mSQL (4.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.5ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:04:18', `status` = 'running' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 36465ms (DB: 12) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:04:18) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 60ms (View: 16, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 19:04:33) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;35;1mListener Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (6.7ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (16)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.5ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:04:34', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 515ms (DB: 13) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:04:34) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 61ms (View: 16, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 19:04:36) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6143631880.472087614969686', '2009-06-02 02:04:36', '2009-06-02 02:04:36', 'b6ef7a410cd518aa8f8f1876772be81566366d89')[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:04:37', `status` = 'running' WHERE `id` = 1[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 665ms (DB: 12) | 302 Found [http://localhost/daemon/start/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:04:37) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 60ms (View: 16, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 19:04:41) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (3.3ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (17)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.5ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:04:41', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 505ms (DB: 9) | 302 Found [http://localhost/daemon/stop/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:04:42) [GET]
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 59ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 19:04:44) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;36;1mListener Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6137421580.0499920407861967', '2009-06-02 02:04:44', '2009-06-02 02:04:44', '7ad3ba70baa1177ee33a3da34d1e7426a34510be')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.5ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:04:44', `status` = 'running' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 518ms (DB: 8) | 302 Found [http://localhost/daemon/start/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:04:44) [GET]
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 59ms (View: 16, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 19:19:05) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Delete all (6.5ms)[0m   [0mDELETE FROM `users` WHERE (`id` IN (18)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (0.5ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:19:05', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 513ms (DB: 13) | 302 Found [http://localhost/daemon/stop/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:19:05) [GET]
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 206ms (View: 17, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 19:19:08) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6126726180.645495087566569', '2009-06-02 02:19:08', '2009-06-02 02:19:08', 'f4b2caa6558bfd13e9f23837f2e7141ca60a75f5')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (2.1ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:19:08', `status` = 'running' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 518ms (DB: 12) | 302 Found [http://localhost/daemon/start/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:19:09) [GET]
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 59ms (View: 16, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#new (for 127.0.0.1 at 2009-06-01 19:19:10) [GET]
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Rendering template within layouts/listeners
+Rendering listeners/new
+Completed in 73ms (View: 25, DB: 2) | 200 OK [http://localhost/listeners/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#create (for 127.0.0.1 at 2009-06-01 19:19:28) [POST]
+  Parameters: {"commit"=>"Create", "listener"=>{"broker_url"=>"abc", "password"=>"dldd", "user"=>"nan", "action_url"=>"def"}, "authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI="}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Create (0.5ms)[0m   [0mINSERT INTO `listeners` (`broker_url`, `created_at`, `updated_at`, `status`, `user`, `password`, `action_url`) VALUES('abc', '2009-06-02 02:19:28', '2009-06-02 02:19:28', NULL, 'nan', 'dldd', 'def')[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners/2
+Completed in 62ms (DB: 5) | 302 Found [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#show (for 127.0.0.1 at 2009-06-01 19:19:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+Rendering template within layouts/listeners
+Rendering listeners/show
+Completed in 66ms (View: 19, DB: 3) | 200 OK [http://localhost/listeners/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:19:30) [GET]
+  [4;35;1mListener Load (0.7ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 65ms (View: 20, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 19:19:35) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"2"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.2ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_2', '-6121532880.936552159650433', '2009-06-02 02:19:35', '2009-06-02 02:19:35', '2bd19dd6bb929cd7dc4fd080ad3667cb70c29d28')[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:19:36', `user` = 'listener_daemon_2', `status` = 'running', `password` = 'big_deal' WHERE `id` = 2[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 663ms (DB: 14) | 302 Found [http://localhost/daemon/start/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:19:36) [GET]
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 69ms (View: 21, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 19:19:41) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"2"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;36;1mUser Delete all (4.3ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (20)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.5ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:19:41', `status` = 'stopped' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 507ms (DB: 10) | 302 Found [http://localhost/daemon/stop/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:19:41) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 65ms (View: 20, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 19:19:44) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;36;1mListener Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (2.8ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (19)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:19:45', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 507ms (DB: 10) | 302 Found [http://localhost/daemon/stop/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:19:45) [GET]
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 65ms (View: 20, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 19:19:47) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"2"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_2') LIMIT 1[0m
+  [4;36;1mUser Create (0.5ms)[0m   [0;1mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_2', '-6142951380.929153602740721', '2009-06-02 02:19:47', '2009-06-02 02:19:47', 'fe44b4ef2596a39bf24ba6e2235ccda4a431e63c')[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mListener Update (2.3ms)[0m   [0mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:19:47', `status` = 'running' WHERE `id` = 2[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 461ms (DB: 12) | 302 Found [http://localhost/daemon/start/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:19:48) [GET]
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;36;1mListener Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+Completed in 65ms (View: 20, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 19:19:50) [POST]
+  Parameters: {"authenticity_token"=>"cMH9YG1DCvkwwFZrQt5TraFmYlEiuUWwWUcC8rerZJI=", "id"=>"1"}
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6129184780.0800048327407628', '2009-06-02 02:19:50', '2009-06-02 02:19:50', '09e015afd48e0d89a73e5c4dc4004d19456778cf')[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:19:50', `status` = 'running' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 517ms (DB: 12) | 302 Found [http://localhost/daemon/start/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:19:51) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 65ms (View: 20, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:21:34) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 263ms (View: 67, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 19:22:35) [POST]
+  Parameters: {"authenticity_token"=>"Ickin7QcT6U5YJZXCqQEbENsLiRNGi65S3PHvMiSuSg=", "id"=>"2"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;36;1mUser Delete all (8.2ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (21)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_2') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_2', '-6139730180.526680822917577', '2009-06-02 02:22:35', '2009-06-02 02:22:35', '15e4ad0b937a5956722317caafc7ac54b4f8ea68')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:22:35', `status` = 'running' WHERE `id` = 2[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 525ms (DB: 17) | 302 Found [http://localhost/daemon/start/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:22:35) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 67ms (View: 22, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#start (for 127.0.0.1 at 2009-06-01 19:22:37) [POST]
+  Parameters: {"authenticity_token"=>"Ickin7QcT6U5YJZXCqQEbENsLiRNGi65S3PHvMiSuSg=", "id"=>"1"}
+  [4;36;1mListener Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (6.6ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (22)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`name` = BINARY 'listener_daemon_1') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`name`, `salt`, `created_at`, `updated_at`, `hashed_password`) VALUES('listener_daemon_1', '-6122854080.956613746314642', '2009-06-02 02:22:37', '2009-06-02 02:22:37', 'ce4b19ee7f7df1fcc98f5335497c44fb95ad061a')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (1.4ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:22:38', `status` = 'running' WHERE `id` = 1[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 480ms (DB: 18) | 302 Found [http://localhost/daemon/start/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:22:38) [GET]
+  [4;36;1mListener Load (0.6ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 65ms (View: 21, DB: 2) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 19:22:40) [POST]
+  Parameters: {"authenticity_token"=>"Ickin7QcT6U5YJZXCqQEbENsLiRNGi65S3PHvMiSuSg=", "id"=>"2"}
+  [4;36;1mListener Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.5ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 2) [0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_2') LIMIT 1[0m
+  [4;36;1mUser Delete all (6.5ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (23)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.6ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:22:41', `status` = 'stopped' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 456ms (DB: 12) | 302 Found [http://localhost/daemon/stop/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:22:41) [GET]
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 65ms (View: 21, DB: 3) | 200 OK [http://localhost/listeners]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing DaemonController#stop (for 127.0.0.1 at 2009-06-01 19:22:43) [POST]
+  Parameters: {"authenticity_token"=>"Ickin7QcT6U5YJZXCqQEbENsLiRNGi65S3PHvMiSuSg=", "id"=>"1"}
+  [4;36;1mListener Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `listeners`[0m
+  [4;35;1mListener Load (0.6ms)[0m   [0mSELECT * FROM `listeners` WHERE (`listeners`.`id` = 1) [0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`name` = 'listener_daemon_1') LIMIT 1[0m
+  [4;36;1mUser Delete all (4.3ms)[0m   [0;1mDELETE FROM `users` WHERE (`id` IN (24)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mListener Update (0.5ms)[0m   [0;1mUPDATE `listeners` SET `updated_at` = '2009-06-02 02:22:43', `status` = 'stopped' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/listeners
+Completed in 503ms (DB: 10) | 302 Found [http://localhost/daemon/stop/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListenersController#index (for 127.0.0.1 at 2009-06-01 19:22:43) [GET]
+  [4;36;1mListener Load (0.5ms)[0m   [0;1mSELECT * FROM `listeners` [0m
+Rendering template within layouts/listeners
+Rendering listeners/index
+  [4;35;1mListener Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `listeners`[0m
+Completed in 64ms (View: 21, DB: 3) | 200 OK [http://localhost/listeners]
