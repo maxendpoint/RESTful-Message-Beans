@@ -37,7 +37,7 @@ require 'daemons'
 # Value of ARGV[3] => --
 # Value of ARGV[4] => RAILS_ROOT
 # Value of ARGV[5] => name of listener (listener_daemon_nn), where nn is id of Listener instance
-# Value of ARGV[6] => broker_url
+# Value of ARGV[6] => subscriber_url
 # Value of ARGV[7] => user
 # Value of ARGV[8] => password
 # Value of ARGV[9] => server_url

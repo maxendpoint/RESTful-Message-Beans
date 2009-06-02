@@ -13,7 +13,7 @@ ActiveRecord::Schema.define(:version => 20090601180643) do
 
   create_table "listeners", :force => true do |t|
     t.string   "status"
-    t.string   "broker_url"
+    t.string   "subscriber_url"
     t.string   "action_url"
     t.string   "user"
     t.string   "password"

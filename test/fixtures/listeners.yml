@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  broker_url: MyString
+  subscriber_url: MyString
   action_url: MyString
   user: MyString
   password: MyString
 
 two:
-  broker_url: MyString
+  subscriber_url: MyString
   action_url: MyString
   user: MyString
   password: MyString

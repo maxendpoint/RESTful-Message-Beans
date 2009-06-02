@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'daemons'
-require 'ngrams'
-require 'yaml'
+require 'password'
 
 class Listener < ActiveRecord::Base
 
@@ -16,20 +15,19 @@ class Listener < ActiveRecord::Base
   def control_daemon(action)
     control_script = "ruby #{File.dirname(__FILE__)}/listener_daemon_control.rb #{action}"
     control_params = "#{app_name} #{RAILS_ROOT}"
-    daemon_params = "-- #{RAILS_ROOT} #{app_name} #{broker_url} #{user} #{password} #{action_url}"
+    daemon_params = "-- #{RAILS_ROOT} #{app_name} #{subscriber_url} #{user} #{password} #{action_url}"
     system("#{control_script} #{control_params} #{daemon_params}")
   end
   
   def start_daemon
- #   debugger
     if self.status != 'running'
-   #   debugger
       # clear out any old instances of user
       delete_old_user
       # create a new user
       self.user = app_name
-      #generator = PasswordGenerator.new
-      self.password = 'big_deal' #generator.generate_password(12)
+     # debugger
+      generator = PasswordGenerator.new
+      self.password = generator.generate_password(12) 
       User.create(:name                  => self.user,
                   :password              => self.password,
                   :password_confirmation => self.password) 
@@ -41,7 +39,6 @@ class Listener < ActiveRecord::Base
   end
   
   def stop_daemon
-#    debugger
     if self.status == 'running'
       control_daemon('stop')
       delete_old_user
@@ -57,12 +54,4 @@ private
   end
 end
 
-class PasswordGenerator
-  def initialize(file = Ngram::Dictionary::DEFAULT_STORE)
-    @dictionary = Ngram:Dictionary.load(file)
-  end
-  
-  def generate_password(length)
-    @dictionary.word(length)
-  end
-end
+

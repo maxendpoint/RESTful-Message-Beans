@@ -6,7 +6,7 @@ require 'stomp'
 #
 # Value of ARGV[0] => RAILS_ROOT
 # Value of ARGV[1] => listener_daemon_<id>, where <id> is the Listener id
-# Value of ARGV[2] => broker_url
+# Value of ARGV[2] => subscriber_url
 # Value of ARGV[3] => user
 # Value of ARGV[4] => password
 # Value of ARGV[5] => server_url
