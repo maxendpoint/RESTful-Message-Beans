@@ -1,8 +1,3 @@
-<p>
-  <b>Body:</b>
-  <%=h @message.body %>
-</p>
+<h3><%= @message.comment %></h3>
 
-
-<%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
+<%= @message.data %>

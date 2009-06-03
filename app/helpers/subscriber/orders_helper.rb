@@ -1,0 +1,2 @@
+module Subscriber::OrdersHelper
+end

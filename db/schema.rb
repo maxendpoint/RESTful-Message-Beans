@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090601180643) do
+ActiveRecord::Schema.define(:version => 20090603162712) do
 
   create_table "listeners", :force => true do |t|
     t.string   "status"
@@ -22,9 +22,19 @@ ActiveRecord::Schema.define(:version => 20090601180643) do
   end
 
   create_table "messages", :force => true do |t|
-    t.text     "body"
+    t.string   "comment"
+    t.string   "name"
+    t.string   "content_type"
+    t.binary   "data",         :limit => 16777215
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "pictures", :force => true do |t|
+    t.string "comment"
+    t.string "name"
+    t.string "content_type"
+    t.binary "data",         :limit => 16777215
   end
 
   create_table "users", :force => true do |t|
