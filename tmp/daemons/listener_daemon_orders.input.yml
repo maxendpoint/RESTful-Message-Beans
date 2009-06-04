@@ -1,0 +1,5 @@
+--- 
+:user: listener_daemon_orders.input
+:password: contilingene
+:subscriber_url: /queue/orders.input
+:action_url: http://localhost:3000

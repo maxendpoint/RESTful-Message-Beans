@@ -3,7 +3,8 @@
 <table>
   <tr>
     <th>Status</th>
-    <th>Broker url</th>
+    <th>Key</th>
+    <th>Subscriber url</th>
     <th>Action url</th>
   </tr>
 
@@ -11,6 +12,7 @@
   <tr>
     <td><%= button_to button_caption(listener) , 
       { :controller => 'daemon', :action => button_caption(listener).downcase, :id => listener.id } %></td>
+    <td><%=h listener.key %></td>
     <td><%=h listener.subscriber_url %></td>
     <td><%=h listener.action_url %></td>
     <td><%= link_to 'Show', listener %></td>

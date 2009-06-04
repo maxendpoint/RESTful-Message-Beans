@@ -5,18 +5,16 @@ require 'stomp'
 # Listener Daemon
 #
 # Value of ARGV[0] => RAILS_ROOT
-# Value of ARGV[1] => listener_daemon_<id>, where <id> is the Listener id
-# Value of ARGV[2] => subscriber_url
-# Value of ARGV[3] => user
-# Value of ARGV[4] => password
-# Value of ARGV[5] => server_url
+  rails_root = ARGV[0]
+# Value of ARGV[1] => listener_daemon_<key>
+  daemon_name = ARGV[1]
 
 # 
 # Start the logger
 #
-  logger = Logger.new("#{ARGV[0]}/log/#{ARGV[1]}.log")
-  logger.info "\nStarting #{ARGV[1]}..."
-
+  logger = Logger.new("#{rails_root}/log/#{daemon_name}.log")
+  logger.info "\nStarting #{daemon_name}..."
+  
 #
 # Process parameters
 #

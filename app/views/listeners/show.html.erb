@@ -1,21 +1,21 @@
 <p>
-  <b>Broker url:</b>
+  <b>Status:</b>
+  <%=  button_caption(@listener) %>
+</p>
+
+<p>
+  <b>Key:</b>
+  <%=h @listener.key %>
+</p>
+
+<p>
+  <b>Subscriber url:</b>
   <%=h @listener.subscriber_url %>
 </p>
 
 <p>
   <b>Action url:</b>
   <%=h @listener.action_url %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @listener.user %>
-</p>
-
-<p>
-  <b>Password:</b>
-  <%=h @listener.password %>
 </p>
 
 
