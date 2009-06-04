@@ -21,7 +21,18 @@ require 'stomp'
   0.upto ARGV.length-1 do |i| 
     logger.info "Value of ARGV[#{i}] => #{ARGV[i]}" 
   end
-
+#
+# Load the properties file
+#
+  properties_file = "#{rails_root}/config/daemons/#{daemon_name}.yml"
+  logger.info "Properties file = #{properties_file}"
+  properties = Hash.new
+  File.open(properties_file, "r") do |f|
+    properties = YAML.load(f)
+  end
+  properties.each do |key, value|
+    logger.info "properties[#{key}] => #{value}"
+  end
 #
 # Log in to server
 #

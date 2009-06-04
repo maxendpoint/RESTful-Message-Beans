@@ -1,0 +1,154 @@
+# Logfile created on Thu Jun 04 11:10:05 -0700 2009 by /
+I, [2009-06-04T11:10:05.603189 #8113]  INFO -- : *** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+E, [2009-06-04T11:10:05.603433 #8113] ERROR -- : no such file to load -- stomp (LoadError)
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:3
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:253:in `start'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:72
+I, [2009-06-04T11:10:05.603602 #8113]  INFO -- : *** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+E, [2009-06-04T11:10:05.605608 #8113] ERROR -- : failed to allocate memory (NoMemoryError)
+
+E, [2009-06-04T11:10:05.605799 #8113] ERROR -- : stack level too deep (SystemStackError)
+
+E, [2009-06-04T11:10:05.605935 #8113] ERROR -- : exception reentered (fatal)
+
+E, [2009-06-04T11:10:05.613897 #8113] ERROR -- : no such file to load -- daemons (LoadError)
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:3
+E, [2009-06-04T11:10:05.657158 #8113] ERROR -- : undefined local variable or method `params' for main:Object (NameError)
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:29
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:28:in `open'
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:28
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:253:in `start'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:72
+E, [2009-06-04T11:10:05.664176 #8113] ERROR -- : no such file to load -- stomp (LoadError)
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:3
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:253:in `start'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:72
+I, [2009-06-04T11:15:10.640908 #8131]  INFO -- : *** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+E, [2009-06-04T11:15:10.641203 #8131] ERROR -- : no such file to load -- stomp (LoadError)
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:3
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:253:in `start'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:72
+I, [2009-06-04T11:15:10.641379 #8131]  INFO -- : *** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+E, [2009-06-04T11:15:10.643454 #8131] ERROR -- : failed to allocate memory (NoMemoryError)
+
+E, [2009-06-04T11:15:10.643635 #8131] ERROR -- : stack level too deep (SystemStackError)
+
+E, [2009-06-04T11:15:10.643764 #8131] ERROR -- : exception reentered (fatal)
+
+E, [2009-06-04T11:15:10.652247 #8131] ERROR -- : no such file to load -- daemons (LoadError)
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:3
+E, [2009-06-04T11:15:10.695908 #8131] ERROR -- : undefined local variable or method `params' for main:Object (NameError)
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:29
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:28:in `open'
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:28
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:253:in `start'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:72
+E, [2009-06-04T11:15:10.703183 #8131] ERROR -- : no such file to load -- stomp (LoadError)
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:3
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:253:in `start'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:72
+I, [2009-06-04T11:17:45.280175 #8168]  INFO -- : *** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+E, [2009-06-04T11:17:45.280485 #8168] ERROR -- : no such file to load -- stomp (LoadError)
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:3
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:253:in `start'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:72
+I, [2009-06-04T11:17:45.280671 #8168]  INFO -- : *** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+E, [2009-06-04T11:17:45.282691 #8168] ERROR -- : failed to allocate memory (NoMemoryError)
+
+E, [2009-06-04T11:17:45.282873 #8168] ERROR -- : stack level too deep (SystemStackError)
+
+E, [2009-06-04T11:17:45.283003 #8168] ERROR -- : exception reentered (fatal)
+
+E, [2009-06-04T11:17:45.293201 #8168] ERROR -- : no such file to load -- daemons (LoadError)
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:3
+E, [2009-06-04T11:17:45.337017 #8168] ERROR -- : undefined local variable or method `params' for main:Object (NameError)
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:30
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:29:in `open'
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:29
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:253:in `start'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:72
+E, [2009-06-04T11:17:45.346914 #8168] ERROR -- : no such file to load -- stomp (LoadError)
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/kenb/development/fulfill/app/models/listener_daemon.rb:3
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:176:in `start_load'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/application.rb:253:in `start'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/controller.rb:69:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:139:in `run'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `call'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons/cmdline.rb:105:in `catch_exceptions'
+/home/kenb/ruby/gems/gems/daemons-1.0.10/lib/daemons.rb:138:in `run'
+/home/kenb/development/fulfill/app/models/listener_daemon_control.rb:72

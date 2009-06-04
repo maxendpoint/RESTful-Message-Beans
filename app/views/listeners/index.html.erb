@@ -5,7 +5,7 @@
     <th>Status</th>
     <th>Key</th>
     <th>Subscriber url</th>
-    <th>Action url</th>
+    <th>Receiver url</th>
   </tr>
 
 <% @listeners.each do |listener| %>
@@ -14,7 +14,7 @@
       { :controller => 'daemon', :action => button_caption(listener).downcase, :id => listener.id } %></td>
     <td><%=h listener.key %></td>
     <td><%=h listener.subscriber_url %></td>
-    <td><%=h listener.action_url %></td>
+    <td><%=h listener.receiver_url %></td>
     <td><%= link_to 'Show', listener %></td>
     <td><%= link_to 'Edit', edit_listener_path(listener) %></td>
     <td><%= link_to 'Destroy', listener, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -9,13 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090603162712) do
+ActiveRecord::Schema.define(:version => 20090604182738) do
 
   create_table "listeners", :force => true do |t|
     t.string   "status"
     t.string   "key"
     t.string   "subscriber_url"
-    t.string   "action_url"
+    t.string   "receiver_url"
     t.string   "user"
     t.string   "password"
     t.datetime "created_at"

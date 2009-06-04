@@ -4,7 +4,7 @@ class CreateListeners < ActiveRecord::Migration
       t.string :status
       t.string :key
       t.string :subscriber_url
-      t.string :action_url
+      t.string :receiver_url
       t.string :user
       t.string :password
 

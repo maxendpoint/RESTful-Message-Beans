@@ -2,12 +2,12 @@
 
 one:
   subscriber_url: MyString
-  action_url: MyString
+  receiver_url: MyString
   user: MyString
   password: MyString
 
 two:
   subscriber_url: MyString
-  action_url: MyString
+  receiver_url: MyString
   user: MyString
   password: MyString
