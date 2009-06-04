@@ -24,15 +24,14 @@ require 'stomp'
 #
 # Load the properties file
 #
-  properties_file = "#{rails_root}/config/daemons/#{daemon_name}.yml"
+  properties_file = "#{rails_root}/config/daemons/#{daemon_name}.properties"
   logger.info "Properties file = #{properties_file}"
   properties = Hash.new
   File.open(properties_file, "r") do |f|
-    properties = YAML.load(f)
+    properties = Marshal.load(f)
   end
-  properties.each do |key, value|
-    logger.info "properties[#{key}] => #{value}"
-  end
+  logger.info "Properties loaded: #{properties.inspect}"
+  
 #
 # Log in to server
 #

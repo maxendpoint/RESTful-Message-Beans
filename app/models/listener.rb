@@ -16,22 +16,35 @@ class Listener < ActiveRecord::Base
     system("#{control_script} #{control_params} #{daemon_params}")
   end
   
+  def load_properties
+  #  debugger
+    params = Hash.new
+    properties = "#{RAILS_ROOT}/config/daemons/#{app_name}.yml"
+    File.open(properties, "r") do |f|
+      params = YAML.load(f)
+    end
+    params
+  end
+  
   def start_daemon
     if self.status != 'running'
-      params = Hash.new
+      params = load_properties
+ #     debugger
+      receiver = params[:receiver]
+      subscriber = params[:subscriber]
       # clear out any old instances of user
       delete_old_user
       # create a new user
-      params[:user] = self.user = app_name
-      params[:password] = self.password = PasswordGenerator.new.generate_password(12) 
+      receiver[:user] = self.user = app_name
+      receiver[:password] = self.password = PasswordGenerator.new.generate_password(12) 
       User.create(:name                  => self.user,
                   :password              => self.password,
                   :password_confirmation => self.password) 
-      params[:receiver_url] = self.receiver_url
-      params[:subscriber_url] = self.subscriber_url
-      properties = "#{RAILS_ROOT}/config/daemons/#{app_name}.yml"
+      receiver[:url] = self.receiver_url
+      subscriber[:url] = self.subscriber_url
+      properties = "#{RAILS_ROOT}/config/daemons/#{app_name}.properties"
       File.open(properties, "w+") do |f|
-        YAML.dump(params, f)
+        Marshal.dump(params, f)
       end
        # update the Listener instance in the db
       self.status = 'running'

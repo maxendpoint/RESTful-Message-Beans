@@ -1,5 +1,13 @@
 --- 
-:subscriber_url: /topic/inventory.stock_level
-:user: listener_daemon_inventory
-:receiver_url: http://localhost:3000
-:password: quatidehloti
+:receiver: 
+  :url: http://localhost:3000
+  :user: ""
+  :password: ""
+  
+:subscriber: 
+  :url: /topic/inventory.stock_level
+  :user: ""
+  :password: ""
+  :host: localhost
+  :port: 61613
+  

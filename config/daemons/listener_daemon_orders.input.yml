@@ -1,5 +1,11 @@
 --- 
-:subscriber_url: /queue/orders.input
-:user: listener_daemon_orders.input
-:receiver_url: http://localhost:3000
-:password: morordubtroi
+:receiver: 
+  :url: http://localhost:3000
+  
+:subscriber: 
+  :url: /queue/orders.input
+  :user: ""
+  :password: ""
+  :host: localhost
+  :port: 61613
+  

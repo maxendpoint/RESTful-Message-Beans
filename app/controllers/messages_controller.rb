@@ -1,5 +1,10 @@
 
 class MessagesController < ApplicationController
+
+  def index
+    redirect_to(:action => 'get')
+  end
+  
   def get
     @message = Message.new
   end
