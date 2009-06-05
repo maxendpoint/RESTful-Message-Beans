@@ -13,10 +13,7 @@ class UploadController < ApplicationController
   end
   # . . .
 
-
-
   def save
-    debugger
     @picture = Picture.new(params[:picture])
     if @picture.save
       redirect_to(:action => 'show', :id => @picture.id)
@@ -25,13 +22,9 @@ class UploadController < ApplicationController
     end
   end
 
-
-
   def show
     @picture = Picture.find(params[:id])
   end
-
-
 
   def picture
     @picture = Picture.find(params[:id])
@@ -40,7 +33,6 @@ class UploadController < ApplicationController
               :type => @picture.content_type,
               :disposition => "inline")
   end
-
 
 end
 

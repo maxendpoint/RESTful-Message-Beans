@@ -1,7 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :images
+
+  map.resources :documents
+
   map.resources :users
 
- #map.resources :messages
+  map.resources :messages
 
   map.resources :listeners
     

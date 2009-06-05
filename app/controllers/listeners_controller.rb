@@ -83,5 +83,4 @@ class ListenersController < ApplicationController
     end
   end
   
-  
 end

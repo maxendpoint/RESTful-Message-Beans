@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @image.name %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @image.comment %>
+</p>
+
+<p>
+  <b>Content type:</b>
+  <%=h @image.content_type %>
+</p>
+
+<img src="<%= url_for(:action => 'image', :id => @image.id) %>
+
+<%= link_to 'Back', images_path %>

@@ -1,3 +1,6 @@
 <h3><%= @message.comment %></h3>
 
 <%= @message.data %>
+
+<%= link_to 'Edit', edit_messages_path(@message) %> |
+<%= link_to 'Back', messages_path %>

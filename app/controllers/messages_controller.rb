@@ -2,18 +2,19 @@
 class MessagesController < ApplicationController
 
   def index
-    redirect_to(:action => 'get')
+    @messages = Message.find(:all)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @listeners }
+    end
   end
   
-  def get
+  def new
     @message = Message.new
   end
-  # . . .
-
-
 
   def save
-#    debugger
     @message = Message.new(params[:message])
     if @message.save
       redirect_to(:action => 'show', :id => @message.id)
@@ -22,13 +23,9 @@ class MessagesController < ApplicationController
     end
   end
 
-
-
   def show
     @message = Message.find(params[:id])
   end
-
-
 
   def message
     @message = Message.find(params[:id])
@@ -37,7 +34,18 @@ class MessagesController < ApplicationController
               :type => @message.content_type,
               :disposition => "inline")
   end
+  
+  # DELETE /listeners/1
+  # DELETE /listeners/1.xml
+  def destroy
+    @message = Message.find(params[:id])
+    @message.destroy
 
+    respond_to do |format|
+      format.html { redirect_to(messages_url) }
+      format.xml  { head :ok }
+    end
+  end
 
 end
 
