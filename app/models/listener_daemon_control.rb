@@ -58,7 +58,7 @@ require 'daemons'
         :multiple       => false,                                        #this will allow multiple daemons to run
         :ontop          => false,                                        #
         :mode           => :load,
-        :backtrace      => true,
+        :backtrace      => false,
         :monitor        => false,
         :log_output     => false,
         :keep_pid_files => true,

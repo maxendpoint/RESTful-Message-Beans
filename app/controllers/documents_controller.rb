@@ -35,7 +35,7 @@ class DocumentsController < ApplicationController
   # POST /documents
   # POST /documents.xml
   def create
-    debugger
+ #   debugger
     @document = Document.new(params[:document])
     @document.marshal_blob
     
