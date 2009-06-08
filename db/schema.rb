@@ -14,11 +14,14 @@ ActiveRecord::Schema.define(:version => 20090604225710) do
   create_table "documents", :force => true do |t|
     t.integer  "listener_id"
     t.string   "key"
-    t.string   "name"
-    t.string   "comment"
+    t.string   "destination"
+    t.string   "message_ID"
     t.string   "content_type"
-    t.binary   "data",         :limit => 16777215
+    t.string   "priority"
+    t.string   "content_length"
     t.string   "time_stamp"
+    t.string   "expiry"
+    t.binary   "data",           :limit => 16777215
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,26 +1,46 @@
 <p>
-  <b>Name:</b>
-  <%=h @document.name %>
+  <b>Key:</b>
+  <%=h @document.key %>
 </p>
 
 <p>
-  <b>Owner key:</b>
-  <%= @document.key %>
+  <b>Destination:</b>
+  <%= @document.destination %>
 </p>
 
 <p>
-  <b>Comment:</b>
-  <%=h @document.comment %>
+  <b>Message-id:</b>
+  <%=h @document.message_ID %>
 </p>
 
 <p>
-  <b>Content type:</b>
+  <b>Content-type:</b>
   <%=h @document.content_type %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%=h @document.priority %>
+</p>
+
+<p>
+  <b>Content-length:</b>
+  <%=h @document.content_length %>
+</p>
+
+<p>
+  <b>Time stamp:</b>
+  <%=h @document.time_stamp %>
+</p>
+
+<p>
+  <b>Expiry:</b>
+  <%=h @document.expiry %>
 </p>
 
 <p>
   <b>Data:</b>
   <%=h @document.data %>
 </p>
-
+  
 <%= link_to 'Back', documents_path %>

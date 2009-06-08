@@ -41,8 +41,6 @@ require 'mechanize'
 # Connect with broker
 #
 subscriber = properties[:subscriber]
-user, password = '', ''
-host, port = 'localhost', 61613
 connection = Stomp::Connection.open(subscriber[:user], subscriber[:password], subscriber[:host], subscriber[:port])
 connection.subscribe subscriber[:url], { :ack => 'auto' } 
 logger.info "Waiting for messages in #{subscriber[:url]}."
@@ -56,14 +54,14 @@ loop do
   #
   message = connection.receive
   logger.info "Received message: #{message.inspect}"
-  logger.info "Message body: #{message.body}"
+  logger.info "Message body: #{message.body.inspect}"
+  logger.info "Message headers: #{message.headers.inspect}"
+  logger.info "Message command: #{message.command.inspect}"
   #
   # Deliver the message
   #
-  t = Time.now
-  time_stamp = t.strftime("%Y%m%d%H%M%S")
-  logger.info "time stamp = #{time_stamp}"
-  file = "#{rails_root}/tmp/messages/#{daemon_name}_#{time_stamp}.message"
+  file = "#{rails_root}/tmp/messages/#{daemon_name}_#{message.headers["timestamp"]}.message"
+  logger.info "file: #{file}"
   File.open(file, "w+") do |f|
     Marshal.dump(message.body, f)
   end
@@ -72,18 +70,28 @@ loop do
   # scrape the delivery screen
   #
   receiver = properties[:receiver]
-  agent = WWW::Mechanize.new # { |a| a.log = Logger.new('scrape.log') }
-  agent.user_agent_alias = 'Mac Safari'
+  agent = WWW::Mechanize.new 
+  logger.info "agent: #{agent}"
+  agent.user_agent_alias = 'Linux Mozilla'
   page = agent.get(receiver[:delivery_url])
-  delivery_form = page.forms.first
+  logger.info "page: #{page}"
+  form = page.forms.first
+  logger.info "form: #{form}"
   
-  delivery_form.fields[1].value = 'name'
-  delivery_form.fields[2].value = key
-  delivery_form.fields[3].value = 'comment'
-  delivery_form.fields[4].value = 'content-type'
-  delivery_form.fields[5].value = time_stamp
+  form.fields[1].value = key
+  form.fields[2].value = message.headers["destination"]
+  form.fields[3].value = message.headers["message-id"]
+  form.fields[4].value = message.headers["content-type"]
+  form.fields[5].value = message.headers["priority"]
+  form.fields[6].value = message.headers["content-length"]
+  form.fields[7].value = message.headers["timestamp"]
+  form.fields[8].value = message.headers["expires"]
+  
+  logger.info form.inspect
+  
   #submit the form
-  page = agent.submit(delivery_form)
+  page = agent.submit(form)
+  logger.info "form submitted"
 #
 # ...and again
 #
