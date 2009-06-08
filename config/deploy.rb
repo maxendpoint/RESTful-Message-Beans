@@ -34,8 +34,8 @@ role :web,                domain
 namespace :deploy do
   task :symlink, :except => { :no_release => true } do
     #
-    # In reality, there are two symlink needed for a complete deploy.
-    # The first one createc a 'current' link in the production/application folder to
+    # In reality, there are two symlinks needed for a complete deploy.
+    # The first one creates a 'current' link in the production/application folder to
     # the latest folder in the releases folder
     run "rm -f #{current_path} && ln -s #{latest_release} #{current_path}"
     #

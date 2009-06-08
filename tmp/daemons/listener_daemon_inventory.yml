@@ -1,5 +1,0 @@
---- 
-:subscriber_url: /topic/inventory.stock_level
-:user: listener_daemon_inventory
-:password: snostnewycop
-:action_url: http://localhost:3000

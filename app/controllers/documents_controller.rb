@@ -35,7 +35,12 @@ class DocumentsController < ApplicationController
   # POST /documents
   # POST /documents.xml
   def create
+ #   debugger
     @document = Document.new(params[:document])
+    @document.marshal_blob
+    
+    l = Listener.find_by_key(@document.key)
+    @document.listener_id = l.id
 
     respond_to do |format|
       if @document.save

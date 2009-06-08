@@ -12,10 +12,13 @@
 ActiveRecord::Schema.define(:version => 20090604225710) do
 
   create_table "documents", :force => true do |t|
+    t.integer  "listener_id"
+    t.string   "key"
     t.string   "name"
     t.string   "comment"
     t.string   "content_type"
-    t.text     "data"
+    t.binary   "data",         :limit => 16777215
+    t.string   "time_stamp"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,9 +36,14 @@ ActiveRecord::Schema.define(:version => 20090604225710) do
     t.string   "status"
     t.string   "key"
     t.string   "subscriber_url"
-    t.string   "receiver_url"
-    t.string   "user"
-    t.string   "password"
+    t.string   "subscriber_host"
+    t.string   "subscriber_port"
+    t.string   "subscriber_user"
+    t.string   "subscriber_password"
+    t.string   "receiver_login_url"
+    t.string   "receiver_delivery_url"
+    t.string   "receiver_user"
+    t.string   "receiver_password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

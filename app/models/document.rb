@@ -1,11 +1,15 @@
 class Document < ActiveRecord::Base
-  def uploaded_document=(document_field)
-    self.name         = base_part_of(document_field.original_filename)
-    self.content_type = document_field.content_type.chomp
-    self.data         = document_field.read
+  belongs_to :listener
+  
+  def marshal_blob
+    self.data = Marshal.load(File.open("#{RAILS_ROOT}/tmp/messages/listener_daemon_#{key}_#{time_stamp}.message"))
   end
-
-  def base_part_of(file_name)
-    File.basename(file_name).gsub(/[^\w._-]/, '')
+  
+  def self.create_marshal_file
+    data = "inventory data"
+    file = "#{RAILS_ROOT}/tmp/messages/listener_daemon_inventory_today.message"
+    File.open(file, "w+") do |f|
+      Marshal.dump(data, f)
+    end
   end
 end

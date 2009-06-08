@@ -34,11 +34,12 @@ require 'daemons'
 # Value of ARGV[0] => action (start|stop)
 # Value of ARGV[1] => RAILS_ROOT
     rails_root = ARGV[1]
-# Value of ARGV[2] => name of listener (listener_daemon_nn), where nn is id of Listener instance
-    daemon_name = ARGV[2]
+# Value of ARGV[2] => listener key
+    key = ARGV[2]
+    daemon_name = "listener_daemon_#{key}"
 # Value of ARGV[3] => --
 # Value of ARGV[4] => RAILS_ROOT
-# Value of ARGV[5] => name of listener (listener_daemon_nn), where nn is id of Listener instance
+# Value of ARGV[5] => listener key
 
 
     logger = Logger.new("#{rails_root}/log/listener_daemon_control.log")

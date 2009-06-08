@@ -1,5 +1,0 @@
---- 
-:subscriber_url: /queue/orders.input
-:user: listener_daemon_orders.input
-:password: paratateroty
-:action_url: http://localhost:3000

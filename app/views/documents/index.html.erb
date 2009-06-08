@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Key</th>
     <th>Comment</th>
     <th>Content type</th>
     <th>Data</th>
@@ -11,6 +12,7 @@
 <% @documents.each do |document| %>
   <tr>
     <td><%=h document.name %></td>
+    <td><%=h document.key %></td>
     <td><%=h document.comment %></td>
     <td><%=h document.content_type %></td>
     <td><%=h document.data %></td>

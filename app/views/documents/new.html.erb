@@ -1,13 +1,37 @@
-<h1>New document</h1>
+<h1>New Document</h1>
 
-<% form_for(:document, 
-            :url => {:action => 'create'}, 
-            :html => { :multipart => true }) do |form| %>
+<% form_for(@document) do |f| %>
+  <%= f.error_messages %>
 
-    Comment:              <%= form.text_field("comment") %><br/>
-    Upload your document: <%= form.file_field("uploaded_document") %><br/>
-
-    <%= submit_tag("Upload document") %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <%= f.label :key %><br />
+    <%= f.text_field :key %>
+  </p>
+  
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </p>
+  
+  <p>
+    <%= f.label :content_type %><br />
+    <%= f.text_field :content_type %>
+  </p>
+  
+  <p>
+    <%= f.label :time_stamp %><br />
+    <%= f.text_field :time_stamp %>
+  </p>
+  
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
 <% end %>
 
 <%= link_to 'Back', documents_path %>
+

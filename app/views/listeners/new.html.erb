@@ -7,13 +7,35 @@
     <%= f.label :key %><br />
     <%= f.text_field :key %>
   </p>
+      
   <p>
     <%= f.label :subscriber_url %><br />
     <%= f.text_field :subscriber_url %>
   </p>
   <p>
-    <%= f.label :receiver_url %><br />
-    <%= f.text_field :receiver_url %>
+    <%= f.label :subscriber_host %><br />
+    <%= f.text_field :subscriber_host %>
+  </p>
+  <p>
+    <%= f.label :subscriber_port %><br />
+    <%= f.text_field :subscriber_port %>
+  </p>
+  <p>
+    <%= f.label :subscriber_user %><br />
+    <%= f.text_field :subscriber_user %>
+  </p>
+  <p>
+    <%= f.label :subscriber_password %><br />
+    <%= f.text_field :subscriber_password %>
+  </p>
+  
+  <p>
+    <%= f.label :receiver_login_url %><br />
+    <%= f.text_field :receiver_login_url %>
+  </p>
+  <p>
+    <%= f.label :receiver_delivery_url %><br />
+    <%= f.text_field :receiver_delivery_url %>
   </p>
   <p>
     <%= f.submit 'Create' %>

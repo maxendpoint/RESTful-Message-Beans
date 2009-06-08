@@ -14,10 +14,14 @@
 </p>
 
 <p>
-  <b>Action url:</b>
-  <%=h @listener.receiver_url %>
+  <b>Receiver Login url:</b>
+  <%=h @listener.receiver_login_url %>
 </p>
 
+<p>
+  <b>Receiver Delivery url:</b>
+  <%=h @listener.receiver_delivery_url %>
+</p>
 
 <%= link_to 'Edit', edit_listener_path(@listener) %> |
 <%= link_to 'Back', listeners_path %>

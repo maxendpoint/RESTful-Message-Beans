@@ -1,20 +1,35 @@
-<h1>Editing listener</h1>
+<h1>Editing listener <%= @listener.key %> </h1>
 
 <% form_for(@listener) do |f| %>
   <%= f.error_messages %>
 
+<em>Subscriber<em>
+  <br />
   <p>
-    <%= f.label :key %><br />
-    <%= f.text_field :key %>
+    URL: <%= f.text_field :subscriber_url %>
   </p>
   <p>
-    <%= f.label :subscriber_url %><br />
-    <%= f.text_field :subscriber_url %>
+    Host: <%= f.text_field :subscriber_host %>
   </p>
   <p>
-    <%= f.label :receiver_url %><br />
-    <%= f.text_field :receiver_url %>
+    Port: <%= f.text_field :subscriber_port %>
   </p>
+  <p>
+    User: <%= f.text_field :subscriber_user %>
+  </p>
+  <p>
+    Password: <%= f.text_field :subscriber_password %>
+  </p>
+  <br />
+  
+<em>Receiver<em><br />
+  <p>
+    Login URL: <%= f.text_field :receiver_login_url %>
+  </p>
+  <p>
+    Delivery URL: <%= f.text_field :receiver_delivery_url %>
+  </p>
+  
   <p>
     <%= f.submit 'Update' %>
   </p>
