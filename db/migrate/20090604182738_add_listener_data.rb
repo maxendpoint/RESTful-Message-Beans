@@ -2,8 +2,8 @@ class AddListenerData < ActiveRecord::Migration
   def self.up
     Listener.delete_all
       
-    Listener.create(:key                   => 'orders.input',
-                    :subscriber_url        => '/queue/orders.input',
+    Listener.create(:key                   => 'orders',
+                    :subscriber_url        => '/queue/orders',
                     :subscriber_host       => 'localhost',
                     :subscriber_port       => '61613',
                     :subscriber_user       => '',
@@ -13,7 +13,7 @@ class AddListenerData < ActiveRecord::Migration
                     :receiver_delivery_url => 'http://localhost:3000/documents/new') 
 
     Listener.create(:key                   => 'inventory',
-                    :subscriber_url        => '/topic/inventory.stock_level', 
+                    :subscriber_url        => '/topic/inventory', 
                     :subscriber_host       => 'localhost',
                     :subscriber_port       => '61613',
                     :subscriber_user       => '',

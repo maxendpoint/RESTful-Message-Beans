@@ -8,6 +8,7 @@ require 'mechanize'
 #
 # Value of ARGV[0] => RAILS_ROOT
   rails_root = ARGV[0]
+  Dir.chdir(rails_root)
 # Value of ARGV[1] => key
   key = ARGV[1]
   daemon_name = "listener_daemon_#{key}"
@@ -15,7 +16,7 @@ require 'mechanize'
 # 
 # Start the logger
 #
-  logger = Logger.new("#{rails_root}/log/#{daemon_name}.log")
+  logger = Logger.new("log/#{daemon_name}.log")
   logger.info "\nStarting #{daemon_name}..."
   
 #
@@ -27,7 +28,7 @@ require 'mechanize'
 #
 # Load the properties file
 #
-  properties_file = "#{rails_root}/tmp/daemons/#{daemon_name}.properties"
+  properties_file = "tmp/daemons/#{daemon_name}.properties"
   logger.info "Properties file = #{properties_file}"
   properties = Marshal.load(File.open(properties_file))
   logger.info "Properties loaded: #{properties.inspect}"
@@ -60,7 +61,7 @@ loop do
   #
   # Deliver the message
   #
-  file = "#{rails_root}/tmp/messages/#{daemon_name}_#{message.headers["timestamp"]}.message"
+  file = "tmp/messages/#{daemon_name}_#{message.headers["timestamp"]}.message"
   logger.info "file: #{file}"
   File.open(file, "w+") do |f|
     Marshal.dump(message.body, f)
