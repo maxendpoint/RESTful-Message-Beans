@@ -16,7 +16,7 @@ require 'mechanize'
 # 
 # Start the logger
 #
-  logger = Logger.new("log/#{daemon_name}.log")
+  logger = Logger.new("#{rails_root}/log/#{daemon_name}.log")
   logger.info "\nStarting #{daemon_name}..."
   
 #
@@ -28,57 +28,62 @@ require 'mechanize'
 #
 # Load the properties file
 #
-  properties_file = "tmp/daemons/#{daemon_name}.properties"
+  properties_file = "#{rails_root}/tmp/daemons/#{daemon_name}.properties"
   logger.info "Properties file = #{properties_file}"
   properties = Marshal.load(File.open(properties_file))
   logger.info "Properties loaded: #{properties.inspect}"
   
-  
+  receiver = properties[:receiver]
+  subscriber = properties[:subscriber]
 #
 # Log in to receiving server
 #
 
+  #not implemented yet
+
 #
 # Connect with broker
 #
-subscriber = properties[:subscriber]
 connection = Stomp::Connection.open(subscriber[:user], subscriber[:password], subscriber[:host], subscriber[:port])
 connection.subscribe subscriber[:url], { :ack => 'auto' } 
-logger.info "Waiting for messages in #{subscriber[:url]}."
+#
+# allocate the receiver agent
+#
+agent = WWW::Mechanize.new 
+agent.user_agent_alias = 'Linux Mozilla'
+logger.info "agent: #{agent.inspect}"
 #
 # Main process loop
 #
 loop do
-
+  logger.info "Waiting for messages in #{subscriber[:url]}."
   #
   # Wait for message...
   #
   message = connection.receive
   logger.info "Received message: #{message.inspect}"
-  logger.info "Message body: #{message.body.inspect}"
-  logger.info "Message headers: #{message.headers.inspect}"
-  logger.info "Message command: #{message.command.inspect}"
+  #logger.info "Message body: #{message.body.inspect}"
+  #logger.info "Message headers: #{message.headers.inspect}"
+  #logger.info "Message command: #{message.command.inspect}"
   #
   # Deliver the message
   #
-  file = "tmp/messages/#{daemon_name}_#{message.headers["timestamp"]}.message"
+  file = "#{rails_root}/tmp/messages/#{daemon_name}_#{message.headers["timestamp"]}.message"
   logger.info "file: #{file}"
   File.open(file, "w+") do |f|
     Marshal.dump(message.body, f)
   end
-  logger.info "completed marshaling of message.body"
+  #logger.info "completed marshaling of message.body"
   #
   # scrape the delivery screen
   #
-  receiver = properties[:receiver]
-  agent = WWW::Mechanize.new 
-  logger.info "agent: #{agent}"
-  agent.user_agent_alias = 'Linux Mozilla'
   page = agent.get(receiver[:delivery_url])
-  logger.info "page: #{page}"
+  #logger.info "page: #{page}"
   form = page.forms.first
-  logger.info "form: #{form}"
+  #logger.info "form: #{form}"
   
+  # I can't seem to make the Mechanize code recognize fields as attributes, so
+  # I am forced to treat them as an array
   form.fields[1].value = key
   form.fields[2].value = message.headers["destination"]
   form.fields[3].value = message.headers["message-id"]
@@ -88,7 +93,7 @@ loop do
   form.fields[7].value = message.headers["timestamp"]
   form.fields[8].value = message.headers["expires"]
   
-  logger.info form.inspect
+  #logger.info form.inspect
   
   #submit the form
   page = agent.submit(form)

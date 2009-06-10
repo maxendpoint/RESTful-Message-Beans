@@ -32,20 +32,16 @@ require 'daemons'
 
 
 # Value of ARGV[0] => action (start|stop)
-# Value of ARGV[1] => RAILS_ROOT
-    rails_root = ARGV[1]
-# Value of ARGV[2] => listener key
-    key = ARGV[2]
+# Value of ARGV[1] => listener key
+    key = ARGV[1]
     daemon_name = "listener_daemon_#{key}"
-# Value of ARGV[3] => --
-# Value of ARGV[4] => RAILS_ROOT
-# Value of ARGV[5] => listener key
+# Value of ARGV[2] => --
+# Value of ARGV[3] => RAILS_ROOT
+# Value of ARGV[4] => listener key
 
-
-    logger = Logger.new("#{rails_root}/log/listener_daemon_control.log")
+    logger = Logger.new("#{Dir.getwd}/log/listener_daemon_control.log")
     logger.info "Starting the control daemon..."
  
-    
     0.upto ARGV.length-1 do |i| 
       logger.info "Value of ARGV[#{i}] => #{ARGV[i]}" 
     end
@@ -54,7 +50,7 @@ require 'daemons'
         :app_name       => daemon_name,                                  #custom name for this daemon
         :ARGV           => nil,                                          #use the program defaults
         :dir_mode       => :normal,                                      #requires absolute path
-        :dir            => "#{rails_root}/tmp/pids",                     #here is where we keep the pids
+        :dir            => "#{Dir.getwd}/tmp/pids",                     #here is where we keep the pids
         :multiple       => false,                                        #this will allow multiple daemons to run
         :ontop          => false,                                        #
         :mode           => :load,
@@ -68,6 +64,6 @@ require 'daemons'
       logger.info "options[#{key}] => #{value}"
     end
     
-    target = "#{rails_root}/app/models/listener_daemon.rb"
+    target = "app/models/listener_daemon.rb"
     logger.info "Launching #{target}...\n"
     Daemons.run(target, options)

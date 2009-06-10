@@ -29,7 +29,7 @@ class Listener < ActiveRecord::Base
                   :password              => receiver[:password],
                   :password_confirmation => receiver[:password]) 
       #Marshal properties out to file; to be read by daemon           
-      properties = "#{RAILS_ROOT}/tmp/daemons/#{app_name}.properties"
+      properties = "tmp/daemons/#{app_name}.properties"
       params[:subscriber] = subscriber
       params[:receiver] = receiver
       File.open(properties, "w+") do |f|
@@ -60,9 +60,10 @@ private
   
   def control_daemon(action)
     control_script = "ruby #{File.dirname(__FILE__)}/listener_daemon_control.rb #{action}"
-    control_params = "#{RAILS_ROOT} #{key}"
+    control_params = "#{key}"
+    daemon_params = "#{RAILS_ROOT} #{key}"
     # pass same set of params to both the daemon_control and the daemon itself
-    system("#{control_script} #{control_params} -- #{control_params}")
+    system("#{control_script} #{control_params} -- #{daemon_params}")
   end
   
   def delete_old_user
