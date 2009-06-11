@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20090604222817) do
     t.string   "key"
     t.string   "subscriber_url"
     t.string   "subscriber_host"
-    t.string   "subscriber_port"
+    t.integer  "subscriber_port"
     t.string   "subscriber_user"
     t.string   "subscriber_password"
     t.string   "receiver_login_url"

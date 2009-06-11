@@ -2,7 +2,7 @@ require 'rubygems'
 require 'logger'
 require 'stomp'
 require 'mechanize'
-
+require 'xmlsimple'
 #
 # Listener Daemon
 #
@@ -12,13 +12,13 @@ require 'mechanize'
 # Value of ARGV[1] => key
   key = ARGV[1]
   daemon_name = "listener_daemon_#{key}"
+# Value of ARGV[2] => XML representation of properties
 
 # 
 # Start the logger
 #
   logger = Logger.new("#{rails_root}/log/#{daemon_name}.log")
-  logger.info "\nStarting #{daemon_name}..."
-  
+  logger.info "\nStarting #{File.basename(__FILE__)} --> #{daemon_name}..."
 #
 # Process parameters
 #
@@ -28,13 +28,17 @@ require 'mechanize'
 #
 # Load the properties file
 #
-  properties_file = "#{rails_root}/tmp/daemons/#{daemon_name}.properties"
-  logger.info "Properties file = #{properties_file}"
-  properties = Marshal.load(File.open(properties_file))
+#  properties_file = "#{rails_root}/tmp/daemons/#{daemon_name}.properties"
+  #logger.info "Properties file = #{properties_file}"
+  properties = XmlSimple.xml_in(ARGV[2])
   logger.info "Properties loaded: #{properties.inspect}"
   
-  receiver = properties[:receiver]
-  subscriber = properties[:subscriber]
+  
+  #xml marshalling creates an extra array around a hash...
+  receiver = properties['receiver'][0]
+  logger.info "receiver: #{receiver.inspect}"
+  subscriber = properties['subscriber'][0]
+  logger.info "subscriber: #{subscriber.inspect}"
 #
 # Log in to receiving server
 #
@@ -44,8 +48,8 @@ require 'mechanize'
 #
 # Connect with broker
 #
-connection = Stomp::Connection.open(subscriber[:user], subscriber[:password], subscriber[:host], subscriber[:port])
-connection.subscribe subscriber[:url], { :ack => 'auto' } 
+connection = Stomp::Connection.open(subscriber['user'], subscriber['password'], subscriber['host'], subscriber['port'])
+connection.subscribe subscriber['url'], { :ack => 'auto' } 
 #
 # allocate the receiver agent
 #
@@ -56,7 +60,7 @@ logger.info "agent: #{agent.inspect}"
 # Main process loop
 #
 loop do
-  logger.info "Waiting for messages in #{subscriber[:url]}."
+  logger.info "Waiting for messages in #{subscriber['url']}."
   #
   # Wait for message...
   #
@@ -73,14 +77,14 @@ loop do
   File.open(file, "w+") do |f|
     Marshal.dump(message.body, f)
   end
-  #logger.info "completed marshaling of message.body"
+  logger.info "completed marshaling of message.body"
   #
   # scrape the delivery screen
   #
-  page = agent.get(receiver[:delivery_url])
-  #logger.info "page: #{page}"
+  page = agent.get(receiver['delivery_url'])
+  logger.info "page: #{page}"
   form = page.forms.first
-  #logger.info "form: #{form}"
+  logger.info "form: #{form}"
   
   # I can't seem to make the Mechanize code recognize fields as attributes, so
   # I am forced to treat them as an array
@@ -93,7 +97,7 @@ loop do
   form.fields[7].value = message.headers["timestamp"]
   form.fields[8].value = message.headers["expires"]
   
-  #logger.info form.inspect
+  logger.info "final form: #{form.inspect}"
   
   #submit the form
   page = agent.submit(form)

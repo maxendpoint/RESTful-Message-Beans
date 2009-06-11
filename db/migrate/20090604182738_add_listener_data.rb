@@ -5,7 +5,7 @@ class AddListenerData < ActiveRecord::Migration
     Listener.create(:key                   => 'orders',
                     :subscriber_url        => '/queue/orders',
                     :subscriber_host       => 'localhost',
-                    :subscriber_port       => '61613',
+                    :subscriber_port       => 61613,
                     :subscriber_user       => '',
                     :subscriber_password   => '',
                     
@@ -15,7 +15,7 @@ class AddListenerData < ActiveRecord::Migration
     Listener.create(:key                   => 'inventory',
                     :subscriber_url        => '/topic/inventory', 
                     :subscriber_host       => 'localhost',
-                    :subscriber_port       => '61613',
+                    :subscriber_port       => 61613,
                     :subscriber_user       => '',
                     :subscriber_password   => '',
                     

@@ -40,7 +40,7 @@ require 'daemons'
 # Value of ARGV[4] => listener key
 
     logger = Logger.new("#{Dir.getwd}/log/listener_daemon_control.log")
-    logger.info "Starting the control daemon..."
+    logger.info "Starting the #{File.basename(__FILE__)}..."
  
     0.upto ARGV.length-1 do |i| 
       logger.info "Value of ARGV[#{i}] => #{ARGV[i]}" 

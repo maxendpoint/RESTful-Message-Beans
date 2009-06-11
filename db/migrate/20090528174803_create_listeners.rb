@@ -7,7 +7,7 @@ class CreateListeners < ActiveRecord::Migration
       #subscriber attributes
       t.string :subscriber_url
       t.string :subscriber_host
-      t.string :subscriber_port
+      t.integer :subscriber_port
       t.string :subscriber_user
       t.string :subscriber_password
       
