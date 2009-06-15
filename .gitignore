@@ -1,5 +1,10 @@
 *~
 log/
 db/schema.rb
+app/models/mechanize_upload_test.rb
+app/models/mechanize-page.rb
+app/models/mechanize_upload_test_results.txt
+app/models/picture_upload_test.rb
+
 
 
