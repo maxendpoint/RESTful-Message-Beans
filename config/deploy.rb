@@ -2,7 +2,7 @@
 # Application-specific settings
 #
 set :rails_env,           "production"
-set :application,         'fulfill'
+set :application,         'rmb'
 #
 #Server specific settings
 #
@@ -10,12 +10,12 @@ set :domain,              'vscdev.com'
 set :user,                "vscdevco"
 set :password,            "dr8k3sb8d"
 set :use_sudo,            false
-set :site5_symlink,	      "/home/#{user}/public_html/#{application}"
+set :site5_symlink,	  "/home/#{user}/public_html/#{application}"
 #
 # SCM and repository settings
 #
 set :scm,                 'git'
-set :repository,          "git@github.com:explainer/fulfill.git "
+set :repository,          "git@github.com:explainer/rmb.git "
 set :branch,              'master'
 set :scm_verbose,         true
 #

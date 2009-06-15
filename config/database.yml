@@ -18,7 +18,7 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: fulfill_development
+  database: rmb_development
   pool: 5
   username: root
   password:
@@ -35,7 +35,7 @@ test:
 
 production:
   adapter: mysql
-  database: vscdevco_fulfillproduction
+  database: vscdevco_rmbproduction
   username: vscdevco_kenb
   password: swan2b
   socket: /var/lib/mysql/mysql.sock
