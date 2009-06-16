@@ -1,25 +1,122 @@
-body { background-color: #fff; color: #333; }
+/* Global styles */
 
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+/* START:notice */
+#notice {
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+/* END:notice */
+
+
+h1 {
+        font:  150% sans-serif;
+        color: #222266;
+        border-bottom: 3px dotted #77d;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+/* START:mainlayout */
+/* Styles for main page */
+
+#banner {
+  background: #99cc99;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  font: small-caps 40px/40px "Arial", sans-serif;
+  color: #B8860B; /* #228822; */
+  text-align: center;
 }
 
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+#banner img {
+  float: left;
+}
+
+#columns {
+  background: #141;
+}
+
+#column-heads {
+  font: small-caps 40px/40px "Arial", sans-serif;
+}
+
+#main {
+  margin-left: 9em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 8em;
+  background: #141;
+}
+
+#side a {
+  color: #bfb;
+  font-size: small;
+}
+/* END:mainlayout */
+
+/* An entry in the store catalog */
+
+#store  .entry {
+  overflow: auto;
+  margin-top: 1em;
+  border-bottom: 1px dotted #77d;
+}
+
+#store  .title {
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+#store .entry img {
+  width: 75px;
+  float: left;
+}
+
+#store .entry h3 {
+ margin-top: 0;
+ margin-bottom: 2px;
+ color: #227;
+}
+
+#store .entry p {
+ margin-top: 0.5em; 
+ margin-bottom: 0.8em; 
+}
+
+#store .entry .price-line {
+ clear: both;
+}
+
+#store .entry .add-to-cart {
+  position: relative;
+}
+
+#store .entry  .price {
+  color: #44a;
+  font-weight: bold;
+  margin-right: 2em;
+}
+
+/* The error box */
 
 .fieldWithErrors {
   padding: 2px;
+  background-color: #EEFFEE;
+  display: inline;
+}
+
+.fieldWithErrors * {
   background-color: red;
-  display: table;
 }
 
 #errorExplanation {

@@ -1,56 +1,64 @@
 <html>
-<body style="background-color:CornSilk;">
+<body>
 
 <h1>New listener</h1>
 
 <% form_for(@listener) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :key %><br />
-    <%= f.text_field :key %>
-  </p>
+  <table>
+    <tr>
+      <td><%= f.label :key %></td>
+      <td><%= f.text_field :key %> </td>
+    </tr>
+  </table>
+    
   <fieldset>
     <legend>
     Message broker subscriber properties
     </legend>
-
-    <p>
-      <%= f.label :subscriber_url %><br />
-      <%= f.text_field :subscriber_url %>
-    </p>
-    <p>
-      <%= f.label :subscriber_host %><br />
-      <%= f.text_field :subscriber_host %>
-    </p>
-    <p>
-      <%= f.label :subscriber_port %><br />
-      <%= f.text_field :subscriber_port %>
-    </p>
-    <p>
-      <%= f.label :subscriber_user %><br />
-      <%= f.text_field :subscriber_user %>
-    </p>
-    <p>
-      <%= f.label :subscriber_password %><br />
-      <%= f.text_field :subscriber_password %>
-    </p>
+    <table>
+      <tr>
+        <td><%= f.label :subscriber_url %></td>
+        <td><%= f.text_field :subscriber_url %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :subscriber_host %></td>
+        <td><%= f.text_field :subscriber_host %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :subscriber_port %></td>
+        <td><%= f.text_field :subscriber_port %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :subscriber_user %></td>
+        <td><%= f.text_field :subscriber_user %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :subscriber_password %></td>
+        <td><%= f.text_field :subscriber_password %></td>
+      </tr>
+    </table>
   </fieldset>
+  
+  <br />
   
   <fieldset>
     <legend>
     RESTful receiver properties
     </legend>
-    <p>
-      <%= f.label :receiver_login_url %><br />
-      <%= f.text_field :receiver_login_url %>
-    </p>
-    <p>
-      <%= f.label :receiver_delivery_url %><br />
-      <%= f.text_field :receiver_delivery_url %>
-    </p>
-    
+    <table>
+      <tr>
+        <td><%= f.label :receiver_login_url %></td>
+        <td><%= f.text_field :receiver_login_url %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :receiver_delivery_url %></td>
+        <td><%= f.text_field :receiver_delivery_url %></td>
+      </tr>
+    </table>
   </fieldset>
+  
   <p>
     <%= f.submit 'Create' %>
   </p>

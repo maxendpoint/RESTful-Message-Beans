@@ -1,27 +1,49 @@
-<p>
-  <b>Status:</b>
-  <%=  button_caption(@listener) %>
-</p>
-
-<p>
-  <b>Key:</b>
-  <%=h @listener.key %>
-</p>
-
-<p>
-  <b>Subscriber url:</b>
-  <%=h @listener.subscriber_url %>
-</p>
-
-<p>
-  <b>Receiver Login url:</b>
-  <%=h @listener.receiver_login_url %>
-</p>
-
-<p>
-  <b>Receiver Delivery url:</b>
-  <%=h @listener.receiver_delivery_url %>
-</p>
+<fieldset>
+    <legend>
+    Message broker subscriber properties
+    </legend>
+    <table>
+      <tr>
+        <td>  Url</td>
+        <td><%=  @listener.subscriber_url %></td>
+      </tr>
+      <tr>
+        <td> Host</td>
+        <td><%=  @listener.subscriber_host %></td>
+      </tr>
+      <tr>
+        <td> Port</td>
+        <td><%=  @listener.subscriber_port %></td>
+      </tr>
+      <tr>
+        <td> User</td>
+        <td><%=  @listener.subscriber_user %></td>
+      </tr>
+      <tr>
+        <td> Password</td>
+        <td><%= @listener.subscriber_password %></td>
+      </tr>
+    </table>
+  </fieldset>
+  
+  <br />
+  
+  <fieldset>
+    <legend>
+    RESTful receiver properties
+    </legend>
+    <table>
+      <tr>
+        <td>Login url</td>
+        <td><%= @listener.receiver_login_url %></td>
+      </tr>
+      <tr>
+        <td>Delivery url</td>
+        <td><%=  @listener.receiver_delivery_url %></td>
+      </tr>
+    </table>
+  </fieldset>  
+<br />
 
 <%= link_to 'Edit', edit_listener_path(@listener) %> |
 <%= link_to 'Back', listeners_path %>

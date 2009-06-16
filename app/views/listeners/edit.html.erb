@@ -1,35 +1,53 @@
-<h1>Editing listener <%= @listener.key %> </h1>
+<h1>Editing listener <em><%= @listener.key %></em> </h1>
 
 <% form_for(@listener) do |f| %>
   <%= f.error_messages %>
 
-<em>Subscriber<em>
-  <br />
-  <p>
-    URL: <%= f.text_field :subscriber_url %>
-  </p>
-  <p>
-    Host: <%= f.text_field :subscriber_host %>
-  </p>
-  <p>
-    Port: <%= f.text_field :subscriber_port %>
-  </p>
-  <p>
-    User: <%= f.text_field :subscriber_user %>
-  </p>
-  <p>
-    Password: <%= f.text_field :subscriber_password %>
-  </p>
+<fieldset>
+    <legend>
+    Message broker subscriber properties
+    </legend>
+    <table>
+      <tr>
+        <td><%= f.label :subscriber_url %></td>
+        <td><%= f.text_field :subscriber_url %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :subscriber_host %></td>
+        <td><%= f.text_field :subscriber_host %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :subscriber_port %></td>
+        <td><%= f.text_field :subscriber_port %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :subscriber_user %></td>
+        <td><%= f.text_field :subscriber_user %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :subscriber_password %></td>
+        <td><%= f.text_field :subscriber_password %></td>
+      </tr>
+    </table>
+  </fieldset>
+  
   <br />
   
-<em>Receiver<em><br />
-  <p>
-    Login URL: <%= f.text_field :receiver_login_url %>
-  </p>
-  <p>
-    Delivery URL: <%= f.text_field :receiver_delivery_url %>
-  </p>
-  
+  <fieldset>
+    <legend>
+    RESTful receiver properties
+    </legend>
+    <table>
+      <tr>
+        <td><%= f.label :receiver_login_url %></td>
+        <td><%= f.text_field :receiver_login_url %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :receiver_delivery_url %></td>
+        <td><%= f.text_field :receiver_delivery_url %></td>
+      </tr>
+    </table>
+  </fieldset>  
   <p>
     <%= f.submit 'Update' %>
   </p>
