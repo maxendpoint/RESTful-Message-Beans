@@ -1,3 +1,24 @@
+# == Schema Information
+# Schema version: 20090612010321
+#
+# Table name: listeners
+#
+#  id                    :integer(4)      not null, primary key
+#  status                :string(255)
+#  key                   :string(255)
+#  subscriber_url        :string(255)
+#  subscriber_host       :string(255)
+#  subscriber_port       :integer(4)
+#  subscriber_user       :string(255)
+#  subscriber_password   :string(255)
+#  receiver_login_url    :string(255)
+#  receiver_delivery_url :string(255)
+#  receiver_user         :string(255)
+#  receiver_password     :string(255)
+#  created_at            :datetime
+#  updated_at            :datetime
+#
+
 require 'rubygems'
 require 'daemons'
 require 'password'
@@ -5,6 +26,7 @@ require 'xmlsimple'
 
 class Listener < ActiveRecord::Base
   validates_uniqueness_of :key
+  validates_presence_of :key, :subscriber_url, :receiver_delivery_url
   has_many :documents
   
   @@params = Hash.new

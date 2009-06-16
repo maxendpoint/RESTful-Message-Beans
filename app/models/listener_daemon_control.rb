@@ -39,6 +39,7 @@ require 'daemons'
 # Value of ARGV[3] => RAILS_ROOT
 # Value of ARGV[4] => listener key
 
+    Dir.mkdir("#{Dir.getwd}/tmp/messages")
     logger = Logger.new("#{Dir.getwd}/log/listener_daemon_control.log")
     logger.info "Starting the #{File.basename(__FILE__)}..."
  

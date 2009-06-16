@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: pictures
+#
+#  id           :integer(4)      not null, primary key
+#  comment      :string(255)
+#  name         :string(255)
+#  content_type :string(255)
+#  data         :binary(16777215
+#
+
 class Picture < ActiveRecord::Base
 
   validates_format_of :content_type, 
