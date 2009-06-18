@@ -19,9 +19,9 @@
     <td><%=h listener.subscriber_url %></td>
     <td><%=h listener.receiver_login_url %></td>
     <td><%=h listener.receiver_delivery_url%></td>
-    <td><%= button_to 'Show', listener %></td>
-    <td><%= button_to 'Edit', edit_listener_path(listener) %></td>
-    <td><%= button_to 'Destroy', listener, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', listener %></td>
+    <td><%= link_to 'Edit', edit_listener_path(listener) %></td>
+    <td><%= link_to 'Destroy', listener, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

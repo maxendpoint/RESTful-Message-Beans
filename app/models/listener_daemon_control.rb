@@ -30,6 +30,7 @@ require 'daemons'
     #:keep_pid_files:	When given do not delete lingering pid-files (files for which the process is no longer running).
     #:hard_exit:	    When given use exit! to end a daemons instead of exit (this will for example not call at_exit handlers). 
 
+puts "listener_daemon_control.rb, Dir.getwd --> #{Dir.getwd}"
 
 # Value of ARGV[0] => action (start|stop)
 # Value of ARGV[1] => listener key
@@ -39,7 +40,10 @@ require 'daemons'
 # Value of ARGV[3] => RAILS_ROOT
 # Value of ARGV[4] => listener key
 
-    Dir.mkdir("#{Dir.getwd}/tmp/messages")
+    messages_dir = "#{Dir.getwd}/tmp/messages"
+    if !File.directory?(messages_dir)
+      Dir.mkdir(messages_dir)
+    end
     logger = Logger.new("#{Dir.getwd}/log/listener_daemon_control.log")
     logger.info "Starting the #{File.basename(__FILE__)}..."
  
