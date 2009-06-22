@@ -22,7 +22,6 @@
 require 'rubygems'
 require 'daemons'
 require 'password'
-require 'xmlsimple'
 
 class Properties
   attr_accessor :rails_root, :key, :daemon_name, :payload, :logger
@@ -50,7 +49,6 @@ class Properties
   end
   
   def save
- #   debugger
     File.open(file_name, "w+") do |f|
       Marshal.dump(self, f)
     end
@@ -62,22 +60,19 @@ class Listener < ActiveRecord::Base
   validates_presence_of :key, :subscriber_url, :receiver_delivery_url
   has_many :documents
   
-  @@params = Hash.new
-  @@properties = nil
-  
   def start_daemon
     if self.status != 'running'
-      properties
-      receiver = @@params['receiver']
+      prop = properties
+      receiver = prop.payload[:receiver]
       # clear out any old instances of user
       delete_old_user
       # create a new user
-      receiver['user'] = app_name
-      receiver['password'] = self.receiver_password = PasswordGenerator.new.generate_password(12) 
-      User.create(:name                  => receiver['user'],
-                  :password              => receiver['password'],
-                  :password_confirmation => receiver['password']) 
-       # update the Listener instance in the db
+      receiver[:user] = app_name
+      receiver[:password] = self.receiver_password = PasswordGenerator.new.generate_password(12) 
+      User.create(:name                  => receiver[:user],
+                  :password              => receiver[:password],
+                  :password_confirmation => receiver[:password]) 
+      # update the Listener instance in the db
       self.status = 'running'
       save
       # start the control script
@@ -103,7 +98,7 @@ private
   def control_daemon(action)
     control_script = "ruby #{File.dirname(__FILE__)}/listener_daemon_control.rb #{action}"
     control_params = "#{key}"
-    daemon_params = "#{RAILS_ROOT} #{key} #{xml_marshal}"
+    daemon_params = "#{RAILS_ROOT} #{key}"
     system("#{control_script} #{control_params} -- #{daemon_params}")
   end
   
@@ -113,29 +108,23 @@ private
   end
   
   def properties
-    @@properties = Properties.new(RAILS_ROOT, self.key)
-    @@params = Hash.new
+    prop = Properties.new(RAILS_ROOT, self.key)
     subscriber = Hash.new
-    subscriber['url'] = self.subscriber_url
-    subscriber['host'] = self.subscriber_host
-    subscriber['port'] = self.subscriber_port
-    subscriber['user'] = self.subscriber_user
-    subscriber['password'] = self.subscriber_password
+    subscriber[:url] = self.subscriber_url
+    subscriber[:host] = self.subscriber_host
+    subscriber[:port] = self.subscriber_port
+    subscriber[:user] = self.subscriber_user
+    subscriber[:password] = self.subscriber_password
     
     receiver = Hash.new
-    receiver['login_url'] = self.receiver_login_url
-    receiver['delivery_url'] = self.receiver_delivery_url
+    receiver[:login_url] = self.receiver_login_url
+    receiver[:delivery_url] = self.receiver_delivery_url
     
-    @@params['subscriber'] = subscriber
-    @@params['receiver'] = receiver
-    @@properties.payload['receiver'] = receiver
-    @@properties.payload['subscriber'] = subscriber
-    @@properties.save
+    prop.payload[:receiver] = receiver
+    prop.payload[:subscriber] = subscriber
+    prop.save
+    prop
   end
-  
-  def xml_marshal
-    s = XmlSimple.xml_out(@@params)
-    s1 = "'" + s.gsub(/\n/, " ") + "'"
-  end
+
 end
 

@@ -2,7 +2,6 @@ require 'rubygems'
 require 'logger'
 require 'stomp'
 require 'mechanize'
-#require 'xmlsimple'
 
 class Properties
   attr_accessor :rails_root, :key, :daemon_name, :payload, :logger
@@ -40,12 +39,12 @@ class Subscriber
   attr_accessor :url, :host, :port, :user, :password, :connection, :logger
   
   def initialize(prop)
-    subscriber = prop.payload['subscriber']
-    @url = subscriber['url'] || "/queue/something"
-    @host = subscriber['host'] || ""
-    @port = subscriber['port'] || 61613
-    @user = subscriber['user'] || ""
-    @password = subscriber['password'] || ""
+    subscriber = prop.payload[:subscriber]
+    @url = subscriber[:url] || "/queue/something"
+    @host = subscriber[:host] || ""
+    @port = subscriber[:port] || 61613
+    @user = subscriber[:user] || ""
+    @password = subscriber[:password] || ""
     @connection = nil
     @logger = prop.logger
   end
@@ -69,15 +68,15 @@ class Receiver
   attr_accessor :user, :password, :login_url, :delivery_url, :agent, :rails_root, :key, :logger, :agent, :daemon_name
   
   def initialize(prop)
-    receiver = prop.payload['receiver']
+    receiver = prop.payload[:receiver]
     @rails_root = prop.rails_root
     @key = prop.key
     @daemon_name = "listener_daemon_#{key}"
     @logger = prop.logger
-    @user = receiver['user'] || ""
-    @password = receiver['password'] || ""
-    @login_url = receiver['login_url'] || ""
-    @delivery_url = receiver['delivery_url'] || ""
+    @user = receiver[:user] || ""
+    @password = receiver[:password] || ""
+    @login_url = receiver[:login_url] || ""
+    @delivery_url = receiver[:delivery_url] || ""
     @agent = WWW::Mechanize.new 
     @agent.user_agent_alias = 'Linux Mozilla'
     @logger.info "agent: #{agent.inspect}"
@@ -147,16 +146,12 @@ end
 #
 # Listener Daemon main program
 #
-  # Value of ARGV[0] => RAILS_ROOT
-  rails_root = ARGV[0]
-  Dir.chdir(rails_root)
-  # Value of ARGV[1] => key
-  key = ARGV[1]
-  daemon_name = "listener_daemon_#{key}"
-  # Value of ARGV[2] => XML representation of properties
-
-  # start the daemon worker code
-  l = ListenerDaemon.new(rails_root, key)
-  l.run
+# Value of ARGV[0] => RAILS_ROOT
+# Value of ARGV[1] => key
+#
+# start the daemon worker code...
+l = ListenerDaemon.new(ARGV[0], ARGV[1])
+# ...and listen forever
+l.run
 
 
