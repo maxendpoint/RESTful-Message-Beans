@@ -30,7 +30,6 @@ require 'daemons'
     #:keep_pid_files:	When given do not delete lingering pid-files (files for which the process is no longer running).
     #:hard_exit:	    When given use exit! to end a daemons instead of exit (this will for example not call at_exit handlers). 
 
-puts "listener_daemon_control.rb, Dir.getwd --> #{Dir.getwd}"
 
 # Value of ARGV[0] => action (start|stop)
 # Value of ARGV[1] => listener key
@@ -46,6 +45,8 @@ puts "listener_daemon_control.rb, Dir.getwd --> #{Dir.getwd}"
     end
     logger = Logger.new("#{Dir.getwd}/log/listener_daemon_control.log")
     logger.info "Starting the #{File.basename(__FILE__)}..."
+    logger.info "listener_daemon_control.rb, Dir.getwd --> #{Dir.getwd}"
+
  
     0.upto ARGV.length-1 do |i| 
       logger.info "Value of ARGV[#{i}] => #{ARGV[i]}" 

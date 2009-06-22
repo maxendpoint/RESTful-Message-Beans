@@ -2,109 +2,161 @@ require 'rubygems'
 require 'logger'
 require 'stomp'
 require 'mechanize'
-require 'xmlsimple'
+#require 'xmlsimple'
+
+class Properties
+  attr_accessor :rails_root, :key, :daemon_name, :payload, :logger
+  
+  def initialize(root, key)
+    @rails_root = root
+    @key = key
+    @daemon_name = "listener_daemon_#{@key}"
+    @payload = Hash.new
+    @logger = nil
+  end
+  
+  def file_name
+    File.join("#{rails_root}", "tmp", "properties", "listener_daemon_#{key}.properties")
+  end
+  
+  def self.load(root, key)
+    result = nil
+    f = File.join("#{root}", "tmp", "properties", "listener_daemon_#{key}.properties")
+    File.open(f) do |props|
+      result = Marshal.load(props)
+    end
+   # File.delete(f)
+    result
+  end
+  
+  def save
+    File.open(file_name, "w+") do |f|
+      Marshal.dump(self, f)
+    end
+  end
+end
+
+class Subscriber
+  attr_accessor :url, :host, :port, :user, :password, :connection, :logger
+  
+  def initialize(prop)
+    subscriber = prop.payload['subscriber']
+    @url = subscriber['url'] || "/queue/something"
+    @host = subscriber['host'] || ""
+    @port = subscriber['port'] || 61613
+    @user = subscriber['user'] || ""
+    @password = subscriber['password'] || ""
+    @connection = nil
+    @logger = prop.logger
+  end
+  
+  def connect
+    @connection = Stomp::Connection.open(user, password, host, port)
+    @connection.subscribe url, { :ack => 'auto' } 
+    @logger.info "@connection --> #{@connection.inspect}"
+    @logger.info "url, user, password, host, port --> #{url}, #{user}, #{password}, #{host}, #{port}"
+    @logger.info "Waiting for messages in #{url}."
+  end
+  
+  def receive
+    message = @connection.receive
+    @logger.info "Received message: #{message.inspect}"
+    message
+  end
+end
+
+class Receiver
+  attr_accessor :user, :password, :login_url, :delivery_url, :agent, :rails_root, :key, :logger, :agent, :daemon_name
+  
+  def initialize(prop)
+    receiver = prop.payload['receiver']
+    @rails_root = prop.rails_root
+    @key = prop.key
+    @daemon_name = "listener_daemon_#{key}"
+    @logger = prop.logger
+    @user = receiver['user'] || ""
+    @password = receiver['password'] || ""
+    @login_url = receiver['login_url'] || ""
+    @delivery_url = receiver['delivery_url'] || ""
+    @agent = WWW::Mechanize.new 
+    @agent.user_agent_alias = 'Linux Mozilla'
+    @logger.info "agent: #{agent.inspect}"
+  end
+  
+  def send(message)
+    file = File.join("#{@rails_root}", "tmp", "messages", "#{@daemon_name}_#{message.headers["timestamp"]}.message")
+    logger.info "message file: #{file}"
+    File.open(file, "w+") do |f|
+      Marshal.dump(message.body, f)
+    end
+    logger.info "completed marshalling of message.body"
+    page = agent.get(delivery_url)
+    form = page.forms.first
+    
+    # I can't seem to make the Mechanize code recognize fields as attributes, so
+    # I am forced to treat them as an array
+    form.fields[1].value = key
+    form.fields[2].value = message.headers["destination"]
+    form.fields[3].value = message.headers["message-id"]
+    form.fields[4].value = message.headers["content-type"]
+    form.fields[5].value = message.headers["priority"]
+    form.fields[6].value = message.headers["content-length"]
+    form.fields[7].value = message.headers["timestamp"]
+    form.fields[8].value = message.headers["expires"]
+    
+    logger.info "final form: #{form.inspect}"
+    
+    #submit the form
+    page = agent.submit(form)
+  end
+  
+  def login
+    #this code requires completion of the User controller in the main app
+  end
+end
+
+class ListenerDaemon
+  attr_accessor :rails_root, :key, :receiver, :subscriber, :properties, :logger, :daemon_name
+  
+  def initialize(root, key)
+    @rails_root = root
+    @key = key
+    @daemon_name = "listener_daemon_#{key}"
+    @logger = Logger.new("#{@rails_root}/log/#{daemon_name}.log")
+    @logger.info "\nStarting #{File.basename(__FILE__)} --> #{daemon_name}..."
+    @properties = Properties.load(@rails_root, @key)
+    @properties.logger = @logger
+    @logger.info "\n@properties --> #{@properties.inspect}"
+    @subscriber = Subscriber.new(@properties)
+    @receiver = Receiver.new(@properties)
+  end
+  
+  def run
+    subscriber.connect
+    logger.info "subscriber connected."
+    receiver.login
+    logger.info "receiver logged in."
+    logger.info "Waiting for messages in #{subscriber.url}."
+    loop do
+      message = subscriber.receive
+      receiver.send(message)
+    end
+  end
+end
 
 #
-# Listener Daemon
+# Listener Daemon main program
 #
-# Value of ARGV[0] => RAILS_ROOT
+  # Value of ARGV[0] => RAILS_ROOT
   rails_root = ARGV[0]
   Dir.chdir(rails_root)
-# Value of ARGV[1] => key
+  # Value of ARGV[1] => key
   key = ARGV[1]
   daemon_name = "listener_daemon_#{key}"
-# Value of ARGV[2] => XML representation of properties
+  # Value of ARGV[2] => XML representation of properties
 
-# 
-# Start the logger
-#
-  logger = Logger.new("#{rails_root}/log/#{daemon_name}.log")
-  logger.info "\nStarting #{File.basename(__FILE__)} --> #{daemon_name}..."
-#
-# Process parameters
-#
-  0.upto ARGV.length-1 do |i| 
-    logger.info "Value of ARGV[#{i}] => #{ARGV[i]}" 
-  end
-#
-# Load the properties file
-#
-#  properties_file = "#{rails_root}/tmp/daemons/#{daemon_name}.properties"
-  #logger.info "Properties file = #{properties_file}"
-  properties = XmlSimple.xml_in(ARGV[2])
-  logger.info "Properties loaded: #{properties.inspect}"
-  
-  
-  #xml marshalling creates an extra array around a hash...
-  receiver = properties['receiver'][0]
-  logger.info "receiver: #{receiver.inspect}"
-  subscriber = properties['subscriber'][0]
-  logger.info "subscriber: #{subscriber.inspect}"
-#
-# Log in to receiving server
-#
+  # start the daemon worker code
+  l = ListenerDaemon.new(rails_root, key)
+  l.run
 
-  #not implemented yet
-
-#
-# Connect with broker
-#
-connection = Stomp::Connection.open(subscriber['user'], subscriber['password'], subscriber['host'], subscriber['port'])
-connection.subscribe subscriber['url'], { :ack => 'auto' } 
-#
-# allocate the receiver agent
-#
-agent = WWW::Mechanize.new 
-agent.user_agent_alias = 'Linux Mozilla'
-logger.info "agent: #{agent.inspect}"
-#
-# Main process loop
-#
-loop do
-  logger.info "Waiting for messages in #{subscriber['url']}."
-  #
-  # Wait for message...
-  #
-  message = connection.receive
-  logger.info "Received message: #{message.inspect}"
-  #logger.info "Message body: #{message.body.inspect}"
-  #logger.info "Message headers: #{message.headers.inspect}"
-  #logger.info "Message command: #{message.command.inspect}"
-  #
-  # Deliver the message
-  #
-  file = "#{rails_root}/tmp/messages/#{daemon_name}_#{message.headers["timestamp"]}.message"
-  logger.info "file: #{file}"
-  File.open(file, "w+") do |f|
-    Marshal.dump(message.body, f)
-  end
-  logger.info "completed marshaling of message.body"
-  #
-  # scrape the delivery screen
-  #
-  page = agent.get(receiver['delivery_url'])
-  logger.info "page: #{page}"
-  form = page.forms.first
-  logger.info "form: #{form}"
-  
-  # I can't seem to make the Mechanize code recognize fields as attributes, so
-  # I am forced to treat them as an array
-  form.fields[1].value = key
-  form.fields[2].value = message.headers["destination"]
-  form.fields[3].value = message.headers["message-id"]
-  form.fields[4].value = message.headers["content-type"]
-  form.fields[5].value = message.headers["priority"]
-  form.fields[6].value = message.headers["content-length"]
-  form.fields[7].value = message.headers["timestamp"]
-  form.fields[8].value = message.headers["expires"]
-  
-  logger.info "final form: #{form.inspect}"
-  
-  #submit the form
-  page = agent.submit(form)
-  logger.info "form submitted"
-#
-# ...and again
-#
-end
 
