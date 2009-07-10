@@ -5,38 +5,9 @@ require 'rubygems'
 require 'logger'
 require 'stomp'
 require 'mechanize'
+require "#{RAILS_ROOT}/app/models/properties.rb"
 
-class Properties
-  attr_accessor :rails_root, :key, :daemon_name, :payload, :logger
-  
-  def initialize(root, key)
-    @rails_root = root
-    @key = key
-    @daemon_name = "listener_daemon_#{@key}"
-    @payload = Hash.new
-    @logger = nil
-  end
-  
-  def file_name
-    File.join("#{rails_root}", "tmp", "properties", "listener_daemon_#{key}.properties")
-  end
-  
-  def self.load(root, key)
-    result = nil
-    f = File.join("#{root}", "tmp", "properties", "listener_daemon_#{key}.properties")
-    File.open(f) do |props|
-      result = Marshal.load(props)
-    end
-   # File.delete(f)
-    result
-  end
-  
-  def save
-    File.open(file_name, "w+") do |f|
-      Marshal.dump(self, f)
-    end
-  end
-end
+#include Subscribable
 
 class Subscriber
   attr_accessor :url, :host, :port, :user, :password, :connection, :logger
@@ -85,6 +56,10 @@ class Receiver
     @logger.info "agent: #{agent.inspect}"
   end
   
+  def connect
+    #this code requires completion of the User controller in the main app
+  end
+  
   def send(message)
     file = File.join("#{@rails_root}", "tmp", "messages", "#{@daemon_name}_#{message.headers["timestamp"]}.message")
     logger.info "message file: #{file}"
@@ -112,10 +87,6 @@ class Receiver
     #submit the form
     page = agent.submit(form)
   end
-  
-  def login
-    #this code requires completion of the User controller in the main app
-  end
 end
 
 class ListenerDaemon
@@ -137,7 +108,7 @@ class ListenerDaemon
   def run
     subscriber.connect
     logger.info "subscriber connected."
-    receiver.login
+    receiver.connect
     logger.info "receiver logged in."
     logger.info "Waiting for messages in #{subscriber.url}."
     loop do

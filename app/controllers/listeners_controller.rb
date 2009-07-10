@@ -61,7 +61,13 @@ class ListenersController < ApplicationController
 
     respond_to do |format|
       if @listener.update_attributes(params[:listener])
-        flash[:notice] = 'Listener was successfully updated.'
+        if @listener.running?
+          @listener.stop_daemon
+          @listener.start_daemon
+          flash[:notice] = 'Listener was modified and restarted.'
+        else
+          flash[:notice] = 'Listener was successfully updated.'
+        end
         format.html { redirect_to(@listener) }
         format.xml  { head :ok }
       else

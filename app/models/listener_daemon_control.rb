@@ -62,7 +62,7 @@ require 'daemons'
         :mode           => :load,
         :backtrace      => false,
         :monitor        => false,
-        :log_output     => false,
+        :log_output     => true,
         :keep_pid_files => true,
         :hard_exit      => true
       }
