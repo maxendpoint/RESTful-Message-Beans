@@ -1,5 +1,5 @@
 module ListenersHelper
   def button_caption(listener)
-    listener.status == 'running' ? 'Stop' : 'Start'
+    listener.running? ? 'Stop' : 'Start'
   end
 end

@@ -1,3 +1,6 @@
+RAILS_ROOT = ENV['rails_root']
+Dir.chdir(RAILS_ROOT)
+
 require 'rubygems'
 require 'logger'
 require 'stomp'
@@ -146,11 +149,15 @@ end
 #
 # Listener Daemon main program
 #
-# Value of ARGV[0] => RAILS_ROOT
+
 # Value of ARGV[1] => key
 #
 # start the daemon worker code...
-l = ListenerDaemon.new(ARGV[0], ARGV[1])
+l = ListenerDaemon.new(RAILS_ROOT, ARGV[0])
+#ENV.each do |key,value|
+  #l.logger.info "ENV.#{key} => #{value}"
+#end
+l.logger.info "ENV['rails_root'] => #{ENV['rails_root']}"
 # ...and listen forever
 l.run
 

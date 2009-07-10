@@ -61,7 +61,7 @@ class Listener < ActiveRecord::Base
   has_many :documents
   
   def start_daemon
-    if self.status != 'running'
+    if !self.running?
       prop = properties
       receiver = prop.payload[:receiver]
       # clear out any old instances of user
@@ -73,22 +73,36 @@ class Listener < ActiveRecord::Base
                   :password              => receiver[:password],
                   :password_confirmation => receiver[:password]) 
       # update the Listener instance in the db
-      self.status = 'running'
-      save
       # start the control script
       control_daemon('start')
     end
   end
   
   def stop_daemon
-    if self.status == 'running'
+    if self.running?
       control_daemon('stop')
       delete_old_user
-      self.status = 'stopped'
-      save
     end
   end
 
+  def pid
+    value = 0
+    if running?
+      File.open(pid_file, 'r') do |f|
+        value = f.gets
+      end
+    end
+    value
+  end
+  
+  def pid_file
+    File.join("#{RAILS_ROOT}", "tmp", "pids", "#{app_name}.pid")
+  end
+  
+  def running?
+    File.exists?(pid_file)
+  end
+  
 private  
 
   def app_name
@@ -98,8 +112,8 @@ private
   def control_daemon(action)
     control_script = "ruby #{File.dirname(__FILE__)}/listener_daemon_control.rb #{action}"
     control_params = "#{key}"
-    daemon_params = "#{RAILS_ROOT} #{key}"
-    system("#{control_script} #{control_params} -- #{daemon_params}")
+#    daemon_params = "#{key}"
+    system("#{control_script} #{control_params} -- #{control_params}")
   end
   
   def delete_old_user

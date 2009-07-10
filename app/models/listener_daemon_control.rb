@@ -36,8 +36,7 @@ require 'daemons'
     key = ARGV[1]
     daemon_name = "listener_daemon_#{key}"
 # Value of ARGV[2] => --
-# Value of ARGV[3] => RAILS_ROOT
-# Value of ARGV[4] => listener key
+# Value of ARGV[3] => listener key
 
     messages_dir = "#{Dir.getwd}/tmp/messages"
     if !File.directory?(messages_dir)
@@ -46,7 +45,8 @@ require 'daemons'
     logger = Logger.new("#{Dir.getwd}/log/listener_daemon_control.log")
     logger.info "Starting the #{File.basename(__FILE__)}..."
     logger.info "listener_daemon_control.rb, Dir.getwd --> #{Dir.getwd}"
-
+    # set an environment variable to point to the RAILS_ROOT
+    ENV['rails_root'] = Dir.getwd
  
     0.upto ARGV.length-1 do |i| 
       logger.info "Value of ARGV[#{i}] => #{ARGV[i]}" 
@@ -56,7 +56,7 @@ require 'daemons'
         :app_name       => daemon_name,                                  #custom name for this daemon
         :ARGV           => nil,                                          #use the program defaults
         :dir_mode       => :normal,                                      #requires absolute path
-        :dir            => "#{Dir.getwd}/tmp/pids",                     #here is where we keep the pids
+        :dir            => "#{Dir.getwd}/tmp/pids",                      #here is where we keep the pids
         :multiple       => false,                                        #this will allow multiple daemons to run
         :ontop          => false,                                        #
         :mode           => :load,

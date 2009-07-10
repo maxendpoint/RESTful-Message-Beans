@@ -5,6 +5,7 @@
   <div id="column-heads">
     <th>Status</th>
     <th>Key</th>
+    <th>Pid</th>
     <th>Subscriber url</th>
     <th>Receiver login url</th>
     <th>Receiver delivery url</th>
@@ -16,6 +17,7 @@
     <td><%= button_to button_caption(listener) , 
       { :controller => 'daemon', :action => button_caption(listener).downcase, :id => listener.id } %></td>
     <td><%=h listener.key %></td>
+    <td><%=h listener.pid %></td>
     <td><%=h listener.subscriber_url %></td>
     <td><%=h listener.receiver_login_url %></td>
     <td><%=h listener.receiver_delivery_url%></td>

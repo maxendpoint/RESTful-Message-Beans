@@ -43,6 +43,23 @@
       </tr>
     </table>
   </fieldset>  
+  
+  <br />
+  
+  <fieldset>
+    <legend>
+      Operational status
+    </legend>
+    <table>
+      <tr>
+        <td>Status</td>
+        <td><%= @listener.running? ? 'Active' : 'Idle' %></td>
+      </tr>
+      <tr>
+        <td>Pid</td>
+        <td><%= @listener.pid %></td>
+    </table>
+  </fieldset>
 <br />
 
 <%= link_to 'Edit', edit_listener_path(@listener) %> |

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090612010321) do
+ActiveRecord::Schema.define(:version => 20090708212120) do
 
   create_table "documents", :force => true do |t|
     t.integer  "listener_id"
@@ -22,6 +22,19 @@ ActiveRecord::Schema.define(:version => 20090612010321) do
     t.string   "time_stamp"
     t.string   "expiry"
     t.binary   "data",           :limit => 16777215
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", :force => true do |t|
+    t.string   "key"
+    t.string   "destination"
+    t.string   "content_type"
+    t.string   "priority"
+    t.integer  "content_length"
+    t.string   "time_stamp"
+    t.string   "expiry"
+    t.binary   "body",           :limit => 16777215
     t.datetime "created_at"
     t.datetime "updated_at"
   end

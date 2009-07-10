@@ -1,7 +1,6 @@
 class CreateListeners < ActiveRecord::Migration
   def self.up
     create_table :listeners do |t|
-      t.string :status
       t.string :key
       
       #subscriber attributes
