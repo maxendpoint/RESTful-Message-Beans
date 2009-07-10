@@ -105,6 +105,7 @@ class Receiver
     form.fields[6].value = message.headers["content-length"]
     form.fields[7].value = message.headers["timestamp"]
     form.fields[8].value = message.headers["expires"]
+    form.fields[9].value = file
     
     logger.info "final form: #{form.inspect}"
     

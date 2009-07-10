@@ -36,8 +36,6 @@ class DocumentsController < ApplicationController
   # POST /documents.xml
   def create
     @document = Document.new(params[:document])
-    #add the message body
-    @document.marshal_blob
     #find the associated listener by key
     l = Listener.find_by_key(@document.key)
     @document.listener_id = l.id

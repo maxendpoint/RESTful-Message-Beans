@@ -1,46 +1,65 @@
-<p>
-  <b>Key:</b>
-  <%=h @document.key %>
-</p>
+<fieldset>
+  <legend>
+    Listener properties
+  </legend>
+  <p>
+    <b>Key:</b>
+    <%=h @document.key %>
+  </p>
 
-<p>
-  <b>Destination:</b>
-  <%= @document.destination %>
-</p>
+  <p>
+    <b>Destination:</b>
+    <%= @document.destination %>
+  </p>
+</fieldset>
 
-<p>
-  <b>Message-id:</b>
-  <%=h @document.message_ID %>
-</p>
+<br />
 
-<p>
-  <b>Content-type:</b>
-  <%=h @document.content_type %>
-</p>
+<fieldset>
+  <legend>
+    Message properties
+  </legend>
+  <p>
+    <b>Message-id:</b>
+    <%=h @document.message_ID %>
+  </p>
 
-<p>
-  <b>Priority:</b>
-  <%=h @document.priority %>
-</p>
+  <p>
+    <b>Content-type:</b>
+    <%=h @document.content_type %>
+  </p>
 
-<p>
-  <b>Content-length:</b>
-  <%=h @document.content_length %>
-</p>
+  <p>
+    <b>Priority:</b>
+    <%=h @document.priority %>
+  </p>
 
-<p>
-  <b>Time stamp:</b>
-  <%=h @document.time_stamp %>
-</p>
+  <p>
+    <b>Content-length:</b>
+    <%=h @document.content_length %>
+  </p>
 
-<p>
-  <b>Expiry:</b>
-  <%=h @document.expiry %>
-</p>
+  <p>
+    <b>Time stamp:</b>
+    <%=h @document.time_stamp %>
+  </p>
 
-<p>
-  <b>Data:</b>
-  <%=h @document.data %>
-</p>
+  <p>
+    <b>Expiry:</b>
+    <%=h @document.expiry %>
+  </p>
+</fieldset>
+
+<br />
+
+<fieldset>
+  <legend>
+    Message body
+  </legend>
+  <p>
+    <b>Data:</b>
+    <%=h @document.data %>
+  </p>
+</fieldset>
   
 <%= link_to 'Back', documents_path %>

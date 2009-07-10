@@ -10,6 +10,7 @@ class CreateDocuments < ActiveRecord::Migration
       t.string :content_length
       t.string :time_stamp
       t.string :expiry
+      t.string :data_file
       # If using MySQL, blobs default to 64k, so we have to give
       # an explicit size to extend them
       t.binary :data, :limit => 1.megabyte
