@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'logger'
 require 'daemons'
+require "app/models/test_module.rb" # /home/kenb/development/RESTful-Message-Beans/
+
+include TestModule
 #
 # Listener Daemon Control Program
 #
@@ -47,7 +50,11 @@ require 'daemons'
     logger.info "listener_daemon_control.rb, Dir.getwd --> #{Dir.getwd}"
     # set an environment variable to point to the RAILS_ROOT
     ENV['rails_root'] = Dir.getwd
- 
+    str = ''
+    $:.each do |path|
+      str << "#{path}, "
+    end
+    ENV['rails_path'] = str
     0.upto ARGV.length-1 do |i| 
       logger.info "Value of ARGV[#{i}] => #{ARGV[i]}" 
     end
@@ -69,7 +76,7 @@ require 'daemons'
     options.each do |key, value|
       logger.info "options[#{key}] => #{value}"
     end
-    
+
     target = "app/models/listener_daemon.rb"
     logger.info "Launching #{target}...\n"
     Daemons.run(target, options)

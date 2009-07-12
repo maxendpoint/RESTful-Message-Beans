@@ -4,12 +4,9 @@
   <tr>
     <th>Key</th>
     <th>destination</th>
-    <th>message-id</th>
-    <th>content-type</th>
-    <th>priority</th>
+    
     <th>content-length</th>
-    <th>timestamp</th>
-    <th>expiry</th>
+   
     <th>data</th>
   </tr>
 
@@ -17,12 +14,9 @@
   <tr>
     <td><%=h document.key %></td>
     <td><%=h document.destination %></td>
-    <td><%=h document.message_ID %></td>  
-    <td><%=h document.content_type %></td>
-    <td><%=h document.priority %></td>
+   
     <td><%=h document.content_length %></td> 
-    <td><%=h document.time_stamp %></td> 
-    <td><%=h document.expiry %></td>
+    
     <td><%=h document.data %></td>
     <td><%= link_to 'Show', document %></td>
     <td><%= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %></td>

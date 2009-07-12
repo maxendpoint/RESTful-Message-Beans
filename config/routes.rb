@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :lurkers
+
   map.resources :images
 
   map.resources :pictures
