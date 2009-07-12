@@ -19,8 +19,8 @@ class Subscriber
   def connect
     @connection = Stomp::Connection.open(user, password, host, port)
     @connection.subscribe url, { :ack => 'auto' } 
-    @logger.info "@connection --> #{@connection.inspect}"
-    @logger.info "url, user, password, host, port --> #{url}, #{user}, #{password}, #{host}, #{port}"
+    #@logger.info "@connection --> #{@connection.inspect}"
+    #@logger.info "url, user, password, host, port --> #{url}, #{user}, #{password}, #{host}, #{port}"
     @logger.info "Waiting for messages in #{url}."
   end
   

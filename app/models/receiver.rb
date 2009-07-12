@@ -18,20 +18,24 @@ class Receiver
     @delivery_url = receiver[:delivery_url] || ""
     @agent = WWW::Mechanize.new 
     @agent.user_agent_alias = 'Linux Mozilla'
-    @logger.info "agent: #{agent.inspect}"
+    #@logger.info "agent: #{agent.inspect}"
   end
   
   def connect
     #this code requires completion of the User controller in the main app
   end
   
-  def send(message)
+  def marshal_message_body(message)
     file = File.join("#{@rails_root}", "tmp", "messages", "#{@daemon_name}_#{message.headers["timestamp"]}.message")
-    logger.info "message file: #{file}"
+    #logger.info "message file: #{file}"
     File.open(file, "w+") do |f|
       Marshal.dump(message.body, f)
     end
-    logger.info "completed marshalling of message.body"
+    file
+  end
+  
+  def send(message)
+    file = marshal_message_body(message)
     page = agent.get(delivery_url)
     form = page.forms.first
     
@@ -47,7 +51,7 @@ class Receiver
     form.fields[8].value = message.headers["expires"]
     form.fields[9].value = file
     
-    logger.info "final form: #{form.inspect}"
+    #logger.info "final form: #{form.inspect}"
     
     #submit the form
     page = agent.submit(form)

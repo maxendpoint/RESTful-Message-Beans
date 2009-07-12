@@ -1,11 +1,6 @@
 RAILS_ROOT = ENV['rails_root']
 Dir.chdir(RAILS_ROOT)
-#str = ENV['rails_path']
-#s = str.split(',')
-#s.each do |str|
-  #$: << str
-#end
-#$:.uniq!
+
 require 'rubygems'
 require 'logger'
 require "app/models/properties.rb"
@@ -23,7 +18,7 @@ class ListenerDaemon
     @logger.info "\nStarting #{File.basename(__FILE__)} --> #{daemon_name}..."
     @properties = Properties.load(@rails_root, @key)
     @properties.logger = @logger
-    @logger.info "\n@properties --> #{@properties.inspect}"
+    #@logger.info "\n@properties --> #{@properties.inspect}"
     @subscriber = Subscriber.new(@properties)
     @receiver = Receiver.new(@properties)
   end
@@ -45,16 +40,10 @@ end
 # Listener Daemon main program
 #
 
-# Value of ARGV[1] => key
+# Value of ARGV[0] => key
 #
 # start the daemon worker code...
 l = ListenerDaemon.new(RAILS_ROOT, ARGV[0])
-#$:.each do |value|
-  #l.logger.info "$: --> #{value}"
-#end
-#ENV.each do |key,value|
-  #l.logger.info "ENV[#{key}] => #{value}"
-#end
 
 # ...and listen forever
 l.run
