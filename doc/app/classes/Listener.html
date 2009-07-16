@@ -86,6 +86,12 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
+      <a href="#M000006">app_name</a>&nbsp;&nbsp;
+      <a href="#M000008">daemon_properties</a>&nbsp;&nbsp;
+      <a href="#M000007">delete_old_user</a>&nbsp;&nbsp;
+      <a href="#M000003">pid</a>&nbsp;&nbsp;
+      <a href="#M000004">pid_file</a>&nbsp;&nbsp;
+      <a href="#M000005">running?</a>&nbsp;&nbsp;
       <a href="#M000001">start_daemon</a>&nbsp;&nbsp;
       <a href="#M000002">stop_daemon</a>&nbsp;&nbsp;
       </div>
@@ -109,6 +115,209 @@
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
+      <div id="method-M000006" class="method-detail">
+        <a name="M000006"></a>
+
+        <div class="method-heading">
+          <a href="#M000006" class="method-signature">
+          <span class="method-name">app_name</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="Listener.html#M000006">app_name</a></tt> is the concatenation
+of &quot;listener_daemon_&quot; and the listener key.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000006-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000006-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/listener.rb, line 62</span>
+62:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">app_name</span>
+63:     <span class="ruby-node">&quot;listener_daemon_#{key}&quot;</span>
+64:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000008" class="method-detail">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+          <a href="#M000008" class="method-signature">
+          <span class="method-name">daemon_properties</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="Listener.html#M000008">daemon_properties</a></tt> answers a
+hash of properties. Starting with an initial copy of the RMB_Properties
+hash, values are set for some keys, and additional key/value pairs are
+added to support more specialized Subscriber/Submitter behavior.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000008-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000008-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/listener.rb, line 76</span>
+ 76:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">daemon_properties</span>
+ 77:     <span class="ruby-comment cmt"># clear out any old instances of user</span>
+ 78:     <span class="ruby-identifier">delete_old_user</span>
+ 79:     
+ 80:     <span class="ruby-identifier">prop</span> = <span class="ruby-constant">RMB</span><span class="ruby-operator">::</span><span class="ruby-constant">RMB_Properties</span> <span class="ruby-comment cmt">#default set of properties</span>
+ 81:     
+ 82:     <span class="ruby-identifier">prop</span>[<span class="ruby-identifier">:working_dir</span>] = <span class="ruby-constant">RAILS_ROOT</span>
+ 83:     <span class="ruby-identifier">prop</span>[<span class="ruby-identifier">:key</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">key</span>
+ 84:     
+ 85:     <span class="ruby-identifier">subscriber</span> = <span class="ruby-identifier">prop</span>[<span class="ruby-identifier">:subscriber</span>]
+ 86:     <span class="ruby-identifier">subscriber</span>[<span class="ruby-identifier">:url</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subscriber_url</span>
+ 87:     <span class="ruby-identifier">subscriber</span>[<span class="ruby-identifier">:host</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subscriber_host</span>
+ 88:     <span class="ruby-identifier">subscriber</span>[<span class="ruby-identifier">:port</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subscriber_port</span>
+ 89:     <span class="ruby-identifier">subscriber</span>[<span class="ruby-identifier">:user</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subscriber_user</span>
+ 90:     <span class="ruby-identifier">subscriber</span>[<span class="ruby-identifier">:password</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subscriber_password</span>
+ 91:     <span class="ruby-identifier">subscriber</span>[<span class="ruby-identifier">:class_name</span>] = <span class="ruby-value str">'StompSubscriber'</span>
+ 92:     
+ 93:     <span class="ruby-identifier">submitter</span> = <span class="ruby-identifier">prop</span>[<span class="ruby-identifier">:submitter</span>]
+ 94:     <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:login_url</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">submitter_login_url</span>
+ 95:     <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:delivery_url</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">submitter_delivery_url</span>
+ 96:     <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:class_name</span>] = <span class="ruby-value str">'MechanizeSubmitter'</span>
+ 97:     <span class="ruby-comment cmt"># create a new user</span>
+ 98:     <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:user</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">submitter_user</span> = <span class="ruby-identifier">app_name</span>
+ 99:     <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:password</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">submitter_password</span> = <span class="ruby-constant">PasswordGenerator</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">generate_password</span>(<span class="ruby-value">12</span>) 
+100:     <span class="ruby-constant">User</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">:name</span>                  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:user</span>],
+101:                 <span class="ruby-identifier">:password</span>              =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:password</span>],
+102:                 <span class="ruby-identifier">:password_confirmation</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:password</span>]) 
+103:     <span class="ruby-comment cmt"># update the listener instance in the db</span>
+104:     <span class="ruby-identifier">save</span>
+105:     <span class="ruby-identifier">prop</span>
+106:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+          <a href="#M000007" class="method-signature">
+          <span class="method-name">delete_old_user</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="Listener.html#M000007">delete_old_user</a></tt> looks up the
+user matching the <a href="Listener.html#M000006">app_name</a>, and if
+found, deletes it.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000007-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000007-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/listener.rb, line 68</span>
+68:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete_old_user</span>
+69:     <span class="ruby-identifier">old_user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">app_name</span>)
+70:     <span class="ruby-constant">User</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">old_user</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">old_user</span>
+71:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000003" class="method-detail">
+        <a name="M000003"></a>
+
+        <div class="method-heading">
+          <a href="#M000003" class="method-signature">
+          <span class="method-name">pid</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="Listener.html#M000003">pid</a></tt> returns the numeric value
+of the <a href="Listener.html#M000003">pid</a> associated with this daemon.
+If the <a href="Listener.html#M000003">pid</a> file does not exists, this
+answers 0.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000003-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000003-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/listener.rb, line 37</span>
+37:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pid</span>
+38:     <span class="ruby-identifier">value</span> = <span class="ruby-value">0</span>
+39:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">running?</span>
+40:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">pid_file</span>, <span class="ruby-value str">'r'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+41:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">gets</span>
+42:       <span class="ruby-keyword kw">end</span>
+43:     <span class="ruby-keyword kw">end</span>
+44:     <span class="ruby-identifier">value</span>
+45:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000004" class="method-detail">
+        <a name="M000004"></a>
+
+        <div class="method-heading">
+          <a href="#M000004" class="method-signature">
+          <span class="method-name">pid_file</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="Listener.html#M000004">pid_file</a></tt> returns the full
+pathname of the file containing the daemon&#8216;s <a
+href="Listener.html#M000003">pid</a>.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000004-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000004-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/listener.rb, line 49</span>
+49:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pid_file</span>
+50:     <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-node">&quot;#{RAILS_ROOT}&quot;</span>, <span class="ruby-value str">&quot;tmp&quot;</span>, <span class="ruby-value str">&quot;pids&quot;</span>, <span class="ruby-node">&quot;#{app_name}.pid&quot;</span>)
+51:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000005" class="method-detail">
+        <a name="M000005"></a>
+
+        <div class="method-heading">
+          <a href="#M000005" class="method-signature">
+          <span class="method-name">running?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
++<a href="Listener.html#M000005">running?</a>+ answers true if the
+daemon&#8216;s <a href="Listener.html#M000004">pid_file</a> exists.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000005-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000005-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/listener.rb, line 56</span>
+56:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">running?</span>
+57:     <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">pid_file</span>)
+58:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
       <div id="method-M000001" class="method-detail">
         <a name="M000001"></a>
 
@@ -119,30 +328,27 @@
         </div>
       
         <div class="method-description">
+          <p>
+<tt><a href="Listener.html#M000001">start_daemon</a></tt> is invoked when
+the daemon associated with this listener is to be started. An instance of
+ListenerClient is created to do the actual work, along with a set of
+properties needed by the daemon. In this demo rails app, pressing the
+<b>start</b> button on the <a href="Listener.html">Listener</a> index page
+starts the process. The button caption is changed to denote the new state
+of the daemon. If the daemon started properly, the value of the <a
+href="Listener.html#M000003">pid</a> is shown.
+</p>
           <p><a class="source-toggle" href="#"
             onclick="toggleCode('M000001-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000001-source">
 <pre>
-    <span class="ruby-comment cmt"># File app/models/listener.rb, line 13</span>
-13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">start_daemon</span>
-14:     <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">'running'</span>
-15:       <span class="ruby-identifier">properties</span>
-16:       <span class="ruby-identifier">receiver</span> = <span class="ruby-ivar">@@params</span>[<span class="ruby-value str">'receiver'</span>]
-17:       <span class="ruby-comment cmt"># clear out any old instances of user</span>
-18:       <span class="ruby-identifier">delete_old_user</span>
-19:       <span class="ruby-comment cmt"># create a new user</span>
-20:       <span class="ruby-identifier">receiver</span>[<span class="ruby-value str">'user'</span>] = <span class="ruby-identifier">app_name</span>
-21:       <span class="ruby-identifier">receiver</span>[<span class="ruby-value str">'password'</span>] = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">receiver_password</span> = <span class="ruby-constant">PasswordGenerator</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">generate_password</span>(<span class="ruby-value">12</span>) 
-22:       <span class="ruby-constant">User</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">:name</span>                  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">receiver</span>[<span class="ruby-value str">'user'</span>],
-23:                   <span class="ruby-identifier">:password</span>              =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">receiver</span>[<span class="ruby-value str">'password'</span>],
-24:                   <span class="ruby-identifier">:password_confirmation</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">receiver</span>[<span class="ruby-value str">'password'</span>]) 
-25:        <span class="ruby-comment cmt"># update the Listener instance in the db</span>
-26:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">status</span> = <span class="ruby-value str">'running'</span>
-27:       <span class="ruby-identifier">save</span>
-28:       <span class="ruby-comment cmt"># start the control script</span>
-29:       <span class="ruby-identifier">control_daemon</span>(<span class="ruby-value str">'start'</span>)
-30:     <span class="ruby-keyword kw">end</span>
-31:   <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File app/models/listener.rb, line 18</span>
+18:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">start_daemon</span>
+19:     <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">running?</span>
+20:       <span class="ruby-identifier">lc</span> = <span class="ruby-constant">RMB</span><span class="ruby-operator">::</span><span class="ruby-constant">ListenerClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">daemon_properties</span>)
+21:       <span class="ruby-identifier">lc</span>.<span class="ruby-identifier">start</span>
+22:     <span class="ruby-keyword kw">end</span>
+23:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
@@ -158,19 +364,23 @@
         </div>
       
         <div class="method-description">
+          <p>
+<tt><a href="Listener.html#M000002">stop_daemon</a></tt> is invoked to stop
+the daemon. The button caption on the <a href="Listener.html">Listener</a>
+index page is changed to denote the new state of the daemon.
+</p>
           <p><a class="source-toggle" href="#"
             onclick="toggleCode('M000002-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000002-source">
 <pre>
-    <span class="ruby-comment cmt"># File app/models/listener.rb, line 33</span>
-33:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stop_daemon</span>
-34:     <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'running'</span>
-35:       <span class="ruby-identifier">control_daemon</span>(<span class="ruby-value str">'stop'</span>)
-36:       <span class="ruby-identifier">delete_old_user</span>
-37:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">status</span> = <span class="ruby-value str">'stopped'</span>
-38:       <span class="ruby-identifier">save</span>
-39:     <span class="ruby-keyword kw">end</span>
-40:   <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File app/models/listener.rb, line 27</span>
+27:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stop_daemon</span>
+28:     <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">running?</span>
+29:       <span class="ruby-identifier">lc</span> = <span class="ruby-constant">RMB</span><span class="ruby-operator">::</span><span class="ruby-constant">ListenerClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">daemon_properties</span>)
+30:       <span class="ruby-identifier">lc</span>.<span class="ruby-identifier">stop</span>
+31:       <span class="ruby-identifier">delete_old_user</span>
+32:     <span class="ruby-keyword kw">end</span>
+33:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: RMB</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">RMB</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/models/rmb_rb.html">
+                app/models/rmb.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="RMB/ListenerClient.html" class="link">RMB::ListenerClient</a><br />
+Class <a href="RMB/ListenerDaemon.html" class="link">RMB::ListenerDaemon</a><br />
+Class <a href="RMB/MechanizeSubmitter.html" class="link">RMB::MechanizeSubmitter</a><br />
+Class <a href="RMB/StompSubscriber.html" class="link">RMB::StompSubscriber</a><br />
+Class <a href="RMB/Submitter.html" class="link">RMB::Submitter</a><br />
+Class <a href="RMB/Subscriber.html" class="link">RMB::Subscriber</a><br />
+
+    </div>
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">RMB_Properties</td>
+          <td>=</td>
+          <td class="context-item-value">{                       :key =&gt; &quot;&lt;&lt;fill&gt;&gt;&quot;,                                                      :subscriber =&gt; {                                        :class_name =&gt; &quot;&lt;&lt;fill&gt;&gt;&quot;</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc"><pre>
+ This multi-level hash contains the initial set of properties needed to launch a Listener daemon.
+</pre>
+<ul>
+<li>Make a writable copy of this hash
+
+</li>
+<li>Fill in the areas denoted by &lt;&lt;fill&gt;&gt; with your values
+
+</li>
+<li>Add additionl properties required by the <a
+href="RMB/Subscriber.html">Subscriber</a> and <a
+href="RMB/Submitter.html">Submitter</a> classes used
+
+</li>
+<li>Pass this has as the sole parameter in listener_client = <a
+href="RMB/ListenerClient.html#M000038">ListenerClient.new(hash)</a> to set
+up the daemon
+
+</li>
+<li>Call listener_client.start to start the daemon.
+
+</li>
+</ul>
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">LD</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;listener_daemon_&quot;</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

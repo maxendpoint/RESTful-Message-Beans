@@ -1,23 +1,3 @@
-# == Schema Information
-# Schema version: 20090612010321
-#
-# Table name: listeners
-#
-#  id                    :integer(4)      not null, primary key
-#  status                :string(255)
-#  key                   :string(255)
-#  subscriber_url        :string(255)
-#  subscriber_host       :string(255)
-#  subscriber_port       :integer(4)
-#  subscriber_user       :string(255)
-#  subscriber_password   :string(255)
-#  submitter_login_url    :string(255)
-#  submitter_delivery_url :string(255)
-#  submitter_user         :string(255)
-#  submitter_password     :string(255)
-#  created_at            :datetime
-#  updated_at            :datetime
-#
 
 require 'rubygems'
 #require 'daemons'
@@ -28,14 +8,22 @@ class Listener < ActiveRecord::Base
   validates_uniqueness_of :key
   validates_presence_of :key, :subscriber_url, :submitter_delivery_url
   has_many :documents
-  
+
+=begin rdoc
++start_daemon+ is invoked when the daemon associated with this listener is to be started.  
+An instance of ListenerClient is created to do the actual work, along with a set of properties needed by the daemon. In this
+demo rails app, pressing the *start* button on the Listener index page starts the process.  
+The button caption is changed to denote the new state of the daemon.  If the daemon started properly, the value of the pid is shown.
+=end  
   def start_daemon
     if !self.running?
       lc = RMB::ListenerClient.new(daemon_properties)
       lc.start
     end
   end
-  
+=begin rdoc
++stop_daemon+ is invoked to stop the daemon.  The button caption on the Listener index page is changed to denote the new state of the daemon.
+=end
   def stop_daemon
     if self.running?
       lc = RMB::ListenerClient.new(daemon_properties)
@@ -43,7 +31,9 @@ class Listener < ActiveRecord::Base
       delete_old_user
     end
   end
-
+=begin rdoc
++pid+ returns the numeric value of the pid associated with this daemon.  If the pid file does not exists, this answers 0.
+=end
   def pid
     value = 0
     if running?
@@ -53,26 +43,36 @@ class Listener < ActiveRecord::Base
     end
     value
   end
-  
+=begin rdoc
++pid_file+ returns the full pathname of the file containing the daemon's pid.
+=end
   def pid_file
     File.join("#{RAILS_ROOT}", "tmp", "pids", "#{app_name}.pid")
   end
   
+=begin rdoc
++running?+ answers true if the daemon's pid_file exists.
+=end
   def running?
     File.exists?(pid_file)
   end
-  
-private  
-
+=begin rdoc
++app_name+ is the concatenation of "listener_daemon_" and the listener key.
+=end
   def app_name
     "listener_daemon_#{key}"
   end
-  
+=begin rdoc
++delete_old_user+ looks up the user matching the app_name, and if found, deletes it.
+=end  
   def delete_old_user
     old_user = User.find_by_name(app_name)
     User.delete(old_user) if old_user
   end
-  
+=begin rdoc
++daemon_properties+ answers a hash of properties.  Starting with an initial copy of the RMB_Properties 
+hash, values are set for some keys, and additional key/value pairs are added to support more specialized Subscriber/Submitter behavior.
+=end  
   def daemon_properties
     # clear out any old instances of user
     delete_old_user

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: RMB::MechanizeSubmitter</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">RMB::MechanizeSubmitter</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/app/models/rmb_rb.html">
+                app/models/rmb.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="Submitter.html">
+                Submitter
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000043">connect</a>&nbsp;&nbsp;
+      <a href="#M000044">marshal_message_body</a>&nbsp;&nbsp;
+      <a href="#M000042">properties=</a>&nbsp;&nbsp;
+      <a href="#M000045">send</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">agent</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">agent</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">daemon_name</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">delivery_url</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">logger</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">login_url</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">password</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">user</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000043" class="method-detail">
+        <a name="M000043"></a>
+
+        <div class="method-heading">
+          <a href="#M000043" class="method-signature">
+          <span class="method-name">connect</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="MechanizeSubmitter.html#M000043">connect</a></tt> Uses the
+login_url property, along with the user and password properties, to log in
+to the rails app.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000043-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000043-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/rmb.rb, line 141</span>
+141:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">connect</span>
+142:       <span class="ruby-keyword kw">super</span>
+143:       <span class="ruby-comment cmt">#this code requires completion of the User controller in the main app</span>
+144:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000044" class="method-detail">
+        <a name="M000044"></a>
+
+        <div class="method-heading">
+          <a href="#M000044" class="method-signature">
+          <span class="method-name">marshal_message_body</span><span class="method-args">(message)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="MechanizeSubmitter.html#M000044">marshal_message_body</a></tt>
+Extracts the message body from the rest of the message, and marshals it
+into a file. The name of this file will be submitted to the rails app,
+along with other message attributes.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000044-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000044-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/rmb.rb, line 148</span>
+148:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">marshal_message_body</span>(<span class="ruby-identifier">message</span>)
+149:       <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-node">&quot;#{@hash[:working_dir]}&quot;</span>, <span class="ruby-value str">&quot;tmp&quot;</span>, <span class="ruby-value str">&quot;messages&quot;</span>, <span class="ruby-node">&quot;#{daemon_name}_#{message.headers[&quot;timestamp&quot;]}.message&quot;</span>)
+150:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">file</span>, <span class="ruby-value str">&quot;w+&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+151:         <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">message</span>.<span class="ruby-identifier">body</span>, <span class="ruby-identifier">f</span>)
+152:       <span class="ruby-keyword kw">end</span>
+153:       <span class="ruby-identifier">file</span>
+154:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000042" class="method-detail">
+        <a name="M000042"></a>
+
+        <div class="method-heading">
+          <a href="#M000042" class="method-signature">
+          <span class="method-name">properties=</span><span class="method-args">(hash)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
++<a href="MechanizeSubmitter.html#M000042">properties=</a>(hash)+ Accepts a
+hash object containing all of the configuration properties required. These
+properties are copied into instance variables.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000042-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000042-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/rmb.rb, line 126</span>
+126:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">properties=</span>(<span class="ruby-identifier">hash</span>)
+127:       <span class="ruby-keyword kw">super</span>
+128:       <span class="ruby-ivar">@hash</span> = <span class="ruby-identifier">hash</span>
+129:       <span class="ruby-ivar">@daemon_name</span> = <span class="ruby-node">&quot;#{LD}#{hash[:key]}&quot;</span>
+130:       <span class="ruby-identifier">submitter</span> = <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">:submitter</span>]
+131:       <span class="ruby-ivar">@user</span> = <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:user</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;&quot;</span>
+132:       <span class="ruby-ivar">@password</span> = <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:password</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;&quot;</span>
+133:       <span class="ruby-ivar">@login_url</span> = <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:login_url</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;&quot;</span>
+134:       <span class="ruby-ivar">@delivery_url</span> = <span class="ruby-identifier">submitter</span>[<span class="ruby-identifier">:delivery_url</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;&quot;</span>
+135:       <span class="ruby-ivar">@agent</span> = <span class="ruby-constant">WWW</span><span class="ruby-operator">::</span><span class="ruby-constant">Mechanize</span>.<span class="ruby-identifier">new</span> 
+136:       <span class="ruby-ivar">@agent</span>.<span class="ruby-identifier">user_agent_alias</span> = <span class="ruby-value str">'Linux Mozilla'</span>
+137:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000045" class="method-detail">
+        <a name="M000045"></a>
+
+        <div class="method-heading">
+          <a href="#M000045" class="method-signature">
+          <span class="method-name">send</span><span class="method-args">(message)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<tt><a href="MechanizeSubmitter.html#M000045">send</a></tt> This method
+uses the <tt>delivery_url</tt> property to issue a get request to retrieve
+the <tt>new document</tt> form from the rails app. The form is filled in
+with message attributes and submitted to the rails app for processing.
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000045-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000045-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/rmb.rb, line 158</span>
+158:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send</span>(<span class="ruby-identifier">message</span>)
+159:       <span class="ruby-keyword kw">super</span>
+160:       <span class="ruby-identifier">file</span> = <span class="ruby-identifier">marshal_message_body</span>(<span class="ruby-identifier">message</span>)
+161:       <span class="ruby-identifier">page</span> = <span class="ruby-identifier">agent</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">delivery_url</span>)
+162:       <span class="ruby-identifier">form</span> = <span class="ruby-identifier">page</span>.<span class="ruby-identifier">forms</span>.<span class="ruby-identifier">first</span>
+163:       
+164:       <span class="ruby-comment cmt"># I can't seem to make the Mechanize code recognize fields as attributes, so</span>
+165:       <span class="ruby-comment cmt"># I am forced to treat them as an array</span>
+166:       <span class="ruby-identifier">form</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">value</span> = <span class="ruby-ivar">@hash</span>[<span class="ruby-identifier">:key</span>]
+167:       <span class="ruby-identifier">form</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">value</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;destination&quot;</span>]
+168:       <span class="ruby-identifier">form</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">value</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;message-id&quot;</span>]
+169:       <span class="ruby-identifier">form</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-value">4</span>].<span class="ruby-identifier">value</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;content-type&quot;</span>]
+170:       <span class="ruby-identifier">form</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-value">5</span>].<span class="ruby-identifier">value</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;priority&quot;</span>]
+171:       <span class="ruby-identifier">form</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-value">6</span>].<span class="ruby-identifier">value</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;content-length&quot;</span>]
+172:       <span class="ruby-identifier">form</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-value">7</span>].<span class="ruby-identifier">value</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;timestamp&quot;</span>]
+173:       <span class="ruby-identifier">form</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-value">8</span>].<span class="ruby-identifier">value</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;expires&quot;</span>]
+174:       <span class="ruby-identifier">form</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-value">9</span>].<span class="ruby-identifier">value</span> = <span class="ruby-identifier">file</span>
+175:       
+176:       <span class="ruby-comment cmt">#logger.info &quot;final form: #{form.inspect}&quot;</span>
+177:       
+178:       <span class="ruby-comment cmt">#submit the form</span>
+179:       <span class="ruby-identifier">page</span> = <span class="ruby-identifier">agent</span>.<span class="ruby-identifier">submit</span>(<span class="ruby-identifier">form</span>)
+180:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

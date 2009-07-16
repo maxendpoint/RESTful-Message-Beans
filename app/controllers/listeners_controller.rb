@@ -1,6 +1,9 @@
 class ListenersController < ApplicationController
   # GET /listeners
   # GET /listeners.xml
+=begin rdoc
++index+ displays a list of all Listeners defined.
+=end
   def index
     @listeners = Listener.all
 
@@ -12,6 +15,9 @@ class ListenersController < ApplicationController
 
   # GET /listeners/1
   # GET /listeners/1.xml
+=begin rdoc
++show+ show a detailed description of a selected Listener
+=end
   def show
     @listener = Listener.find(params[:id])
 
@@ -23,6 +29,9 @@ class ListenersController < ApplicationController
 
   # GET /listeners/new
   # GET /listeners/new.xml
+=begin rdoc
++new+ displays an entry form to create a new Listener instance
+=end
   def new
     @listener = Listener.new
 
@@ -33,12 +42,18 @@ class ListenersController < ApplicationController
   end
 
   # GET /listeners/1/edit
+=begin rdoc
++edit+ displays a form containing the contents of the selected Listener, and allows editing of same
+=end
   def edit
     @listener = Listener.find(params[:id])
   end
 
   # POST /listeners
   # POST /listeners.xml
+=begin rdoc
++create+ the successor to +new+, this method accepts the new parameters, creates the new Listener, and puts it in the database.
+=end
   def create
     @listener = Listener.new(params[:listener])
 
@@ -56,6 +71,9 @@ class ListenersController < ApplicationController
 
   # PUT /listeners/1
   # PUT /listeners/1.xml
+=begin rdoc
++update+ the successor to +edit+, this method accepts the edit parameters, updates the selected Listener, and updates it in the database.
+=end
   def update
     @listener = Listener.find(params[:id])
 
@@ -79,6 +97,9 @@ class ListenersController < ApplicationController
 
   # DELETE /listeners/1
   # DELETE /listeners/1.xml
+=begin rdoc
++destroy+ removes the selected Listener from the application, erasing it from the database.
+=end
   def destroy
     @listener = Listener.find(params[:id])
     @listener.destroy

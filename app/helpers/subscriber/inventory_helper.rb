@@ -1,2 +1,0 @@
-module Subscriber::InventoryHelper
-end

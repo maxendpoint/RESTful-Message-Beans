@@ -80,7 +80,7 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000041">button_caption</a>&nbsp;&nbsp;
+      <a href="#M000037">button_caption</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -102,24 +102,29 @@
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000041" class="method-detail">
-        <a name="M000041"></a>
+      <div id="method-M000037" class="method-detail">
+        <a name="M000037"></a>
 
         <div class="method-heading">
-          <a href="#M000041" class="method-signature">
+          <a href="#M000037" class="method-signature">
           <span class="method-name">button_caption</span><span class="method-args">(listener)</span>
           </a>
         </div>
       
         <div class="method-description">
+          <p>
+<tt><a href="ListenersHelper.html#M000037">button_caption</a></tt> Samples
+whether a daemon is running, and answers a caption that would change the
+daemon&#8216;s state.
+</p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000041-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000041-source">
+            onclick="toggleCode('M000037-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000037-source">
 <pre>
-   <span class="ruby-comment cmt"># File app/helpers/listeners_helper.rb, line 2</span>
-2:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">button_caption</span>(<span class="ruby-identifier">listener</span>)
-3:     <span class="ruby-identifier">listener</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'running'</span> <span class="ruby-operator">?</span> <span class="ruby-value str">'Stop'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'Start'</span>
-4:   <span class="ruby-keyword kw">end</span>
+   <span class="ruby-comment cmt"># File app/helpers/listeners_helper.rb, line 5</span>
+5:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">button_caption</span>(<span class="ruby-identifier">listener</span>)
+6:     <span class="ruby-identifier">listener</span>.<span class="ruby-identifier">running?</span> <span class="ruby-value">? </span><span class="ruby-value str">'Stop'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'Start'</span>
+7:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

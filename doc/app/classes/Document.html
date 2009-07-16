@@ -86,7 +86,7 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000038">marshal_blob</a>&nbsp;&nbsp;
+      <a href="#M000036">data_file=</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -108,28 +108,32 @@
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000038" class="method-detail">
-        <a name="M000038"></a>
+      <div id="method-M000036" class="method-detail">
+        <a name="M000036"></a>
 
         <div class="method-heading">
-          <a href="#M000038" class="method-signature">
-          <span class="method-name">marshal_blob</span><span class="method-args">()</span>
+          <a href="#M000036" class="method-signature">
+          <span class="method-name">data_file=</span><span class="method-args">(name)</span>
           </a>
         </div>
       
         <div class="method-description">
+          <p>
+The <tt>data_file</tt> field contains the name of the file containing the
+body of the message, in marshalled form. This method transfers that data to
+the <tt>data</tt> field of the record.
+</p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000038-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000038-source">
+            onclick="toggleCode('M000036-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000036-source">
 <pre>
-    <span class="ruby-comment cmt"># File app/models/document.rb, line 4</span>
- 4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">marshal_blob</span>
- 5:     <span class="ruby-identifier">name</span> = <span class="ruby-node">&quot;#{RAILS_ROOT}/tmp/messages/listener_daemon_#{key}_#{time_stamp}.message&quot;</span>
- 6:     <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">name</span>)
- 7:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">data</span> = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">f</span>)
- 8:     <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
- 9:     <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">name</span>)
-10:   <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File app/models/document.rb, line 7</span>
+ 7:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">data_file=</span>(<span class="ruby-identifier">name</span>)
+ 8:     <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">name</span>)
+ 9:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">data</span> = <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">f</span>)
+10:     <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+11:     <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">name</span>)
+12:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
