@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090711175757) do
+ActiveRecord::Schema.define(:version => 20090612010321) do
 
   create_table "documents", :force => true do |t|
     t.integer  "listener_id"
@@ -34,24 +34,10 @@ ActiveRecord::Schema.define(:version => 20090711175757) do
     t.integer  "subscriber_port"
     t.string   "subscriber_user"
     t.string   "subscriber_password"
-    t.string   "receiver_login_url"
-    t.string   "receiver_delivery_url"
-    t.string   "receiver_user"
-    t.string   "receiver_password"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "lurkers", :force => true do |t|
-    t.string   "key"
-    t.string   "subscriber_url"
-    t.integer  "subscriber_port"
-    t.string   "subscriber_user"
-    t.string   "subscriber_password"
-    t.string   "receiver_login_url"
-    t.string   "receiver_delivery_url"
-    t.string   "receiver_user"
-    t.string   "receiver_password"
+    t.string   "submitter_login_url"
+    t.string   "submitter_delivery_url"
+    t.string   "submitter_user"
+    t.string   "submitter_password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

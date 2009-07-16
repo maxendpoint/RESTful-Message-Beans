@@ -9,8 +9,8 @@ class AddListenerData < ActiveRecord::Migration
                     :subscriber_user       => '',
                     :subscriber_password   => '',
                     
-                    :receiver_login_url    => 'http://localhost:3000/login',
-                    :receiver_delivery_url => 'http://localhost:3000/documents/new') 
+                    :submitter_login_url    => 'http://localhost:3000/login',
+                    :submitter_delivery_url => 'http://localhost:3000/documents/new') 
 
     Listener.create(:key                   => 'inventory',
                     :subscriber_url        => '/topic/inventory', 
@@ -19,8 +19,8 @@ class AddListenerData < ActiveRecord::Migration
                     :subscriber_user       => '',
                     :subscriber_password   => '',
                     
-                    :receiver_login_url    => 'http://localhost:3000/login',
-                    :receiver_delivery_url => 'http://localhost:3000/documents/new') 
+                    :submitter_login_url    => 'http://localhost:3000/login',
+                    :submitter_delivery_url => 'http://localhost:3000/documents/new') 
   end
 
   def self.down

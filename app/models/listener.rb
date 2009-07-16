@@ -11,45 +11,35 @@
 #  subscriber_port       :integer(4)
 #  subscriber_user       :string(255)
 #  subscriber_password   :string(255)
-#  receiver_login_url    :string(255)
-#  receiver_delivery_url :string(255)
-#  receiver_user         :string(255)
-#  receiver_password     :string(255)
+#  submitter_login_url    :string(255)
+#  submitter_delivery_url :string(255)
+#  submitter_user         :string(255)
+#  submitter_password     :string(255)
 #  created_at            :datetime
 #  updated_at            :datetime
 #
 
 require 'rubygems'
-require 'daemons'
+#require 'daemons'
 require 'password'
-require 'properties'
+require 'rmb'
 
 class Listener < ActiveRecord::Base
   validates_uniqueness_of :key
-  validates_presence_of :key, :subscriber_url, :receiver_delivery_url
+  validates_presence_of :key, :subscriber_url, :submitter_delivery_url
   has_many :documents
   
   def start_daemon
     if !self.running?
-      prop = properties
-      receiver = prop.payload[:receiver]
-      # clear out any old instances of user
-      delete_old_user
-      # create a new user
-      receiver[:user] = app_name
-      receiver[:password] = self.receiver_password = PasswordGenerator.new.generate_password(12) 
-      User.create(:name                  => receiver[:user],
-                  :password              => receiver[:password],
-                  :password_confirmation => receiver[:password]) 
-      # update the Listener instance in the db
-      # start the control script
-      control_daemon('start')
+      lc = RMB::ListenerClient.new(daemon_properties)
+      lc.start
     end
   end
   
   def stop_daemon
     if self.running?
-      control_daemon('stop')
+      lc = RMB::ListenerClient.new(daemon_properties)
+      lc.stop
       delete_old_user
     end
   end
@@ -78,34 +68,40 @@ private
     "listener_daemon_#{key}"
   end
   
-  def control_daemon(action)
-    control_script = "ruby #{File.dirname(__FILE__)}/listener_daemon_control.rb #{action}"
-    control_params = "#{key}"
-#    daemon_params = "#{key}"
-    system("#{control_script} #{control_params} -- #{control_params}")
-  end
-  
   def delete_old_user
     old_user = User.find_by_name(app_name)
     User.delete(old_user) if old_user
   end
   
-  def properties
-    prop = Properties.new(RAILS_ROOT, self.key)
-    subscriber = Hash.new
+  def daemon_properties
+    # clear out any old instances of user
+    delete_old_user
+    
+    prop = RMB::RMB_Properties #default set of properties
+    
+    prop[:working_dir] = RAILS_ROOT
+    prop[:key] = self.key
+    
+    subscriber = prop[:subscriber]
     subscriber[:url] = self.subscriber_url
     subscriber[:host] = self.subscriber_host
     subscriber[:port] = self.subscriber_port
     subscriber[:user] = self.subscriber_user
     subscriber[:password] = self.subscriber_password
+    subscriber[:class_name] = 'StompSubscriber'
     
-    receiver = Hash.new
-    receiver[:login_url] = self.receiver_login_url
-    receiver[:delivery_url] = self.receiver_delivery_url
-    
-    prop.payload[:receiver] = receiver
-    prop.payload[:subscriber] = subscriber
-    prop.save
+    submitter = prop[:submitter]
+    submitter[:login_url] = self.submitter_login_url
+    submitter[:delivery_url] = self.submitter_delivery_url
+    submitter[:class_name] = 'MechanizeSubmitter'
+    # create a new user
+    submitter[:user] = self.submitter_user = app_name
+    submitter[:password] = self.submitter_password = PasswordGenerator.new.generate_password(12) 
+    User.create(:name                  => submitter[:user],
+                :password              => submitter[:password],
+                :password_confirmation => submitter[:password]) 
+    # update the listener instance in the db
+    save
     prop
   end
 

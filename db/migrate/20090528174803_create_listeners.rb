@@ -10,11 +10,11 @@ class CreateListeners < ActiveRecord::Migration
       t.string :subscriber_user
       t.string :subscriber_password
       
-      #receiver attributes
-      t.string :receiver_login_url
-      t.string :receiver_delivery_url
-      t.string :receiver_user
-      t.string :receiver_password
+      #submitter attributes
+      t.string :submitter_login_url
+      t.string :submitter_delivery_url
+      t.string :submitter_user
+      t.string :submitter_password
       
       t.timestamps
     end

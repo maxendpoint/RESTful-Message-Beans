@@ -1,9 +1,7 @@
 require 'rubygems'
 require 'logger'
 require 'daemons'
-require "app/models/test_module.rb" # /home/kenb/development/RESTful-Message-Beans/
-
-include TestModule
+require "#{ARGV[1]}/app/models/rmb.rb"
 #
 # Listener Daemon Control Program
 #
@@ -33,50 +31,31 @@ include TestModule
     #:keep_pid_files:	When given do not delete lingering pid-files (files for which the process is no longer running).
     #:hard_exit:	    When given use exit! to end a daemons instead of exit (this will for example not call at_exit handlers). 
 
-
 # Value of ARGV[0] => action (start|stop)
-# Value of ARGV[1] => listener key
-    key = ARGV[1]
+# Value of ARGV[1] => RAILS_ROOT
+    Dir.chdir(ARGV[1])
+# Value of ARGV[2] => listener key
+    key = ARGV[2]
     daemon_name = "listener_daemon_#{key}"
 # Value of ARGV[2] => --
 # Value of ARGV[3] => listener key
 
-    messages_dir = "#{Dir.getwd}/tmp/messages"
+    messages_dir = File.join("#{Dir.getwd}", "tmp", "messages")
     if !File.directory?(messages_dir)
       Dir.mkdir(messages_dir)
     end
     logger = Logger.new("#{Dir.getwd}/log/listener_daemon_control.log")
     logger.info "Starting the #{File.basename(__FILE__)}..."
-    logger.info "listener_daemon_control.rb, Dir.getwd --> #{Dir.getwd}"
-    # set an environment variable to point to the RAILS_ROOT
-    ENV['rails_root'] = Dir.getwd
-    str = ''
-    $:.each do |path|
-      str << "#{path}, "
-    end
-    ENV['rails_path'] = str
     0.upto ARGV.length-1 do |i| 
       logger.info "Value of ARGV[#{i}] => #{ARGV[i]}" 
     end
 
-    options = {
-        :app_name       => daemon_name,                                  #custom name for this daemon
-        :ARGV           => nil,                                          #use the program defaults
-        :dir_mode       => :normal,                                      #requires absolute path
-        :dir            => "#{Dir.getwd}/tmp/pids",                      #here is where we keep the pids
-        :multiple       => false,                                        #this will allow multiple daemons to run
-        :ontop          => false,                                        #
-        :mode           => :load,
-        :backtrace      => false,
-        :monitor        => false,
-        :log_output     => true,
-        :keep_pid_files => true,
-        :hard_exit      => true
-      }
+    l = RMB::ListenerDaemon.new(ARGV[1], ARGV[2])
+    options = l.hash[:daemon_options]
     options.each do |key, value|
       logger.info "options[#{key}] => #{value}"
     end
 
-    target = "app/models/listener_daemon.rb"
+    target = File.join("#{Dir.getwd}", "app", "models", "listener_daemon.rb")
     logger.info "Launching #{target}...\n"
     Daemons.run(target, options)
