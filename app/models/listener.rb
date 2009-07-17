@@ -1,6 +1,5 @@
 
 require 'rubygems'
-#require 'daemons'
 require 'password'
 require 'rmb'
 
@@ -18,6 +17,7 @@ The button caption is changed to denote the new state of the daemon.  If the dae
   def start_daemon
     if !self.running?
       lc = RMB::ListenerClient.new(daemon_properties)
+      debugger
       lc.start
     end
   end
@@ -77,7 +77,7 @@ hash, values are set for some keys, and additional key/value pairs are added to 
     # clear out any old instances of user
     delete_old_user
     
-    prop = RMB::RMB_Properties #default set of properties
+    prop = RMB::RMB_Properties.clone
     
     prop[:working_dir] = RAILS_ROOT
     prop[:key] = self.key
