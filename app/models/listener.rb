@@ -58,10 +58,10 @@ The button caption is changed to denote the new state of the daemon.  If the dae
     File.exists?(pid_file)
   end
 =begin rdoc
-+app_name+ is the concatenation of "listener_daemon_" and the listener key.
++app_name+ is the concatenation of daemon_prefix and the listener key.
 =end
   def app_name
-    "listener_daemon_#{key}"
+    "#{RMB::Properties.daemon_prefix}#{key}"
   end
 =begin rdoc
 +delete_old_user+ looks up the user matching the app_name, and if found, deletes it.
@@ -71,14 +71,14 @@ The button caption is changed to denote the new state of the daemon.  If the dae
     User.delete(old_user) if old_user
   end
 =begin rdoc
-+daemon_properties+ answers a hash of properties.  Starting with an initial copy of the RMB_Properties 
++daemon_properties+ answers a hash of properties.  Starting with an initial copy of the RMB_Properties.properties 
 hash, values are set for some keys, and additional key/value pairs are added to support more specialized Subscriber/Submitter behavior.
 =end  
   def daemon_properties
     # clear out any old instances of user
     delete_old_user
     
-    prop = RMB::RMB_Properties.clone # start with the default two-level hash, then add application-specific properties
+    prop = RMB::Properties.properties # start with the default two-level hash, then add application-specific properties
     
     prop[:working_dir] = RAILS_ROOT
     prop[:key] = self.key
