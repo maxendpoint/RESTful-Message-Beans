@@ -1,3 +1,6 @@
+require 'rmb-rails'
+include RMB
+
 class DaemonController < ApplicationController
 =begin rdoc
 * locates the Listener by its id

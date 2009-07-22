@@ -1,7 +1,9 @@
 
 require 'rubygems'
 require 'password'
-require 'rmb'
+require 'rmb-rails'
+
+include RMB
 
 class Listener < ActiveRecord::Base
   validates_uniqueness_of :key
