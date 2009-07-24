@@ -36,9 +36,8 @@ class DocumentsController < ApplicationController
   # POST /documents.xml
   def create
     @document = Document.new(params[:document])
-    #find the associated listener by key
-    l = Listener.find_by_key(@document.key)
-    @document.listener_id = l.id
+    #find the associated listener by key, set its id in the document (belongs_to)
+    @document.listener_id = Listener.find_by_key(@document.key).id
 
     respond_to do |format|
       if @document.save

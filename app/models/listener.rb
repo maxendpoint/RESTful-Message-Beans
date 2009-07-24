@@ -71,7 +71,7 @@ The button caption is changed to denote the new state of the daemon.  If the dae
     User.delete(old_user) if old_user
   end
 =begin rdoc
-+daemon_properties+ answers a hash of properties.  Starting with an initial copy of the RMB_Properties.properties 
++daemon_properties+ answers a hash of properties.  Starting with an initial copy of the RMB::Properties.properties 
 hash, values are set for some keys, and additional key/value pairs are added to support more specialized Subscriber/Submitter behavior.
 =end  
   def daemon_properties
