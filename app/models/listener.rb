@@ -1,6 +1,6 @@
 
 require 'rubygems'
-require 'password'
+require 'password_generator'
 require 'rmb-rails'
 
 include RMB

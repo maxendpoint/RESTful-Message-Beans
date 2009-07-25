@@ -1,1 +1,19 @@
-This is a demonstration Rails app that shows how the rmb-rails gem works and how an application using the gem can configure itself to listening to message brokers.
+= This is a demonstration Rails app that shows how the rmb-rails gem works and how an application using the gem can configure itself to 
+listening to message brokers and receiving messages.
+
+== Model classes
+
+* Listener
+Basic housekeeping class to support Listener daemons.  For each Listener daemon, there is a Listener class to collect parameters and to instantiate a 
+ListenerClient when the daemon has to be started or stopped.  This is quite a plain vanilla Rails model.
+
+* Document
+This is a simple class to act as a repository for messages delivered.  There is one somewhat subtle method, data_file=, which marshals the message body out
+of the temporary file that the daemon put it in, the rest is plain vanilla.
+
+* User
+This is another plain vanilla AR model, taken in large part for the Agile Web Development with Rails book.  It is intended that daemons be required to 
+login to the app they are sending messages to, but that has not yet been implemented in the daemon.
+
+* PasswordGenerator
+This class is a wrapper for the ngrams gem, which generates passwords that look like real words, but they're not.
