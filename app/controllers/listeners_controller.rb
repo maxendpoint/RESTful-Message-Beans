@@ -5,6 +5,7 @@ class ListenersController < ApplicationController
  +index+ displays a list of all Listeners defined.
 =end
   def index
+    @page_title = "Listeners"
     @listeners = Listener.all
 
     respond_to do |format|

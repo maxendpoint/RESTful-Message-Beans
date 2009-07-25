@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
+    @page_title = "Users"
     @users = User.find(:all, :order => :name)
 
     respond_to do |format|

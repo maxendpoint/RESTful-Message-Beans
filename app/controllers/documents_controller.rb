@@ -2,6 +2,7 @@ class DocumentsController < ApplicationController
   # GET /documents
   # GET /documents.xml
   def index
+    @page_title = "Documents"
     @documents = Document.all
 
     respond_to do |format|
