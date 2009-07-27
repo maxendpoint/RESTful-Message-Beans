@@ -1,4 +1,5 @@
 /* Global styles */
+#result li.alternate { font-weight: bold; color: green; }
 
 /* START:notice */
 #notice {
@@ -65,48 +66,6 @@ h1 {
 }
 /* END:mainlayout */
 
-/* An entry in the site catalog */
-
-#site  .entry {
-  overflow: auto;
-  margin-top: 1em;
-  border-bottom: 1px dotted #77d;
-}
-
-#site  .title {
-  font-size: 120%;
-  font-family: sans-serif;
-}
-
-#site .entry img {
-  width: 75px;
-  float: left;
-}
-
-#site .entry h3 {
- margin-top: 0;
- margin-bottom: 2px;
- color: #227;
-}
-
-#site .entry p {
- margin-top: 0.5em; 
- margin-bottom: 0.8em; 
-}
-
-#site .entry .price-line {
- clear: both;
-}
-
-#site .entry .add-to-cart {
-  position: relative;
-}
-
-#site .entry  .price {
-  color: #44a;
-  font-weight: bold;
-  margin-right: 2em;
-}
 
 /* The error box */
 
@@ -149,4 +108,38 @@ h1 {
   font-size: 12px;
   list-style: square;
 }
+h1, h2 { font-size: 100%; }
+
+table {
+  margin: 0.5em 0;
+  border: 1px solid black; border-collapse: collapse;
+  font-size: small;
+  font-family: sans-serif;
+}
+
+td, th {
+  padding: 0.2em 0.3em;
+  border: 1px solid silver;
+}
+
+th {
+  text-align: left;
+  padding-right: 20px;
+  cursor: default;
+}
+
+thead th {
+  background-color: navy; color: white;
+}
+/* START:core_styles */
+thead th.sort-asc, thead th.sort-desc {
+  background: #aaf url('public/images/sort-asc.png') no-repeat right center;
+}
+
+thead th.sort-desc { background-image: url('public/images/sort-desc.png'); }
+
+tr.alternate * {
+  background-color: #ddd;
+}
+/* END:core_styles */
 

@@ -1,16 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :lurkers
-
-  map.resources :images
-
-  map.resources :pictures
-
-
-  map.resources :documents
-
-  map.resources :users
 
   map.resources :listeners
+  map.resources :documents
+  map.resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
 

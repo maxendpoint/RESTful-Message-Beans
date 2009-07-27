@@ -1,17 +1,19 @@
 <h1>Listing listeners</h1>
 
-<table>
+<table id="todo">
+<thead>
   <tr>
-  <div id="column-heads">
+  
     <th>Status</th>
     <th>Key</th>
     <th>Pid</th>
     <th>Subscriber url</th>
     <th>Receiver login url</th>
     <th>Receiver delivery url</th>
-  </div>
+ 
   </tr>
-
+</thead>
+<tbody>
 <% @listeners.each do |listener| %>
   <tr>
     <td><%= button_to button_caption(listener) , 
@@ -26,6 +28,7 @@
     <td><%= link_to 'Destroy', listener, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />

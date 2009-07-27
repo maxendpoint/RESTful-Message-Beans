@@ -1,6 +1,7 @@
 <h1>Listing documents</h1>
 
 <table>
+<thead>
   <tr>
     <th>Key</th>
     <th>destination</th>
@@ -9,7 +10,9 @@
    
     <th>data</th>
   </tr>
+</thead>
 
+<tbody>
 <% @documents.each do |document| %>
   <tr>
     <td><%=h document.key %></td>
@@ -22,6 +25,7 @@
     <td><%= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />
