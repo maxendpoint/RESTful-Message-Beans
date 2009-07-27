@@ -67,7 +67,7 @@ h1 {
 /* END:mainlayout */
 
 
-/* The error box */
+/* START:The error box */
 
 .fieldWithErrors {
   padding: 2px;
@@ -108,6 +108,9 @@ h1 {
   font-size: 12px;
   list-style: square;
 }
+
+/* END:The error box */
+
 h1, h2 { font-size: 100%; }
 
 table {
@@ -129,17 +132,17 @@ th {
 }
 
 thead th {
-  background-color: navy; color: white;
+  background-color: #9C9; color: honeydew;
 }
 /* START:core_styles */
 thead th.sort-asc, thead th.sort-desc {
-  background: #aaf url('public/images/sort-asc.png') no-repeat right center;
+  background: #bfb; url('sort-asc.png') no-repeat right center;
 }
 
-thead th.sort-desc { background-image: url('public/images/sort-desc.png'); }
+thead th.sort-desc { background-image: url('sort-desc.png'); }
 
 tr.alternate * {
-  background-color: #ddd;
+  background-color: cornsilk;
 }
 /* END:core_styles */
 
