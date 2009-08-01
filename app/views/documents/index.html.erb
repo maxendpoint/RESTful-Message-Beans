@@ -1,35 +1,12 @@
-<h1>Listing documents</h1>
 
-<table>
-<thead>
-  <tr>
-    <th>Key</th>
-    <th>destination</th>
-    
-    <th>content-length</th>
-   
-    <th>data</th>
-  </tr>
-</thead>
+<%= render(:partial => "documents", :object => @documents) %>
 
-<tbody>
-<% @documents.each do |document| %>
-  <tr>
-    <td><%=h document.key %></td>
-    <td><%=h document.destination %></td>
-   
-    <td><%=h document.content_length %></td> 
-    
-    <td><%=h document.data %></td>
-    <td><%= link_to 'Show', document %></td>
-    <td><%= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</tbody>
-</table>
+<!--  -->
 
-<br />
+<%= periodically_call_remote(
+  :url => {:controller => 'documents', :frequency => '5', :action => 'index'}, 
+  :update => 'documents', 
+  :method => 'get' )
+%>
 
-<%= link_to 'New document', new_document_path %>
-<br />
-<%= link_to 'Back', { :controller => 'listeners', :action => 'index' } %>
+<!--   -->

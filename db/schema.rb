@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090612010321) do
+ActiveRecord::Schema.define(:version => 20090604222817) do
 
   create_table "documents", :force => true do |t|
     t.integer  "listener_id"
@@ -40,13 +40,6 @@ ActiveRecord::Schema.define(:version => 20090612010321) do
     t.string   "submitter_password"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "pictures", :force => true do |t|
-    t.string "comment"
-    t.string "name"
-    t.string "content_type"
-    t.binary "data",         :limit => 16777215
   end
 
   create_table "users", :force => true do |t|

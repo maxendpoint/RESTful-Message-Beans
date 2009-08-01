@@ -1,0 +1,8 @@
+<tr>
+  <td><%=h document.key %></td>
+  <td><%=h document.destination %></td>
+  <td><%=h document.content_length %></td> 
+  <td><%=h document.data %></td>
+  <td><%= link_to 'Show', document %></td>
+  <td><%= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>

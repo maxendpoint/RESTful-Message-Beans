@@ -4,10 +4,16 @@ class DocumentsController < ApplicationController
   def index
     @page_title = "Documents"
     @documents = Document.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @documents }
+    session[:doc_count] = 0 if session[:doc_count].nil?
+    if request.xhr?
+#      debugger
+      render(:partial => "documents", :object => @documents) # if session[:doc_count] != @documents.size
+      session[:doc_count] = @documents.size
+    else
+      respond_to do |format|
+        format.html # index.html.erb
+        format.xml  { render :xml => @documents }
+      end
     end
   end
 

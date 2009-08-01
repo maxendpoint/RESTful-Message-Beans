@@ -1,0 +1,21 @@
+<h1>Listing documents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Destination</th>
+      <th>Content Length</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render(:partial => "document", :collection => @documents) %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New document', new_document_path %>
+<br />
+<%= link_to 'Back', { :controller => 'listeners', :action => 'index' } %>

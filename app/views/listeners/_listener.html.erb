@@ -1,0 +1,12 @@
+<tr>
+  <td><%= button_to button_caption(listener) , 
+    { :controller => 'daemon', :action => button_caption(listener).downcase, :id => listener.id } %></td>
+  <td><%=h listener.key %></td>
+  <td><%=h listener.pid %></td>
+  <td><%=h listener.subscriber_url %></td>
+  <td><%=h listener.submitter_login_url %></td>
+  <td><%=h listener.submitter_delivery_url%></td>
+  <td><%= link_to 'Show', listener %></td>
+  <td><%= link_to 'Edit', edit_listener_path(listener) %></td>
+  <td><%= link_to 'Destroy', listener, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>

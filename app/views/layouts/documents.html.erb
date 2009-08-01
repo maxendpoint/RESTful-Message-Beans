@@ -8,6 +8,7 @@
 <!-- END:stylesheet -->
   <%= javascript_include_tag :all %>
 </head>
+
 <body id="site">
   <div id="banner">
     <%= image_tag("listener.jpeg") %>
@@ -29,9 +30,11 @@
         <div id="notice"><%= flash[:notice] %></div>
       <% end -%>
       <!-- END:flash -->
-
-      <%= yield :layout %>
+      <div id="documents">
+        <%= yield :layout %>
+      </div>
     </div>
   </div>
 </body>
+
 </html>

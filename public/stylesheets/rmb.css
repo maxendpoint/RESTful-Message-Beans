@@ -136,10 +136,11 @@ thead th {
 }
 /* START:core_styles */
 thead th.sort-asc, thead th.sort-desc {
-  background: #bfb; url('sort-asc.png') no-repeat right center;
+  background: #bfb; 
+  background-image: "images/sort-asc.png" no-repeat right center;
 }
 
-thead th.sort-desc { background-image: url('sort-desc.png'); }
+thead th.sort-desc { background-image: "images/sort-desc.png"; }
 
 tr.alternate * {
   background-color: cornsilk;

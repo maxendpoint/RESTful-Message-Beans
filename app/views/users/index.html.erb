@@ -1,22 +1,14 @@
 <h1>Listing users</h1>
 
 <table>
-<thead>
-  <tr>
-    <th>Name</th>
-  </tr>
-</thead>
-<tbody>
-<% @users.each do |user| %>
-  <tr>
-    <td><%=h user.name %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?',
-                                     :method => :delete %></td>
-  </tr>
-<% end %>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render(:partial => "user", :collection => @users) %>
+  </tbody>
 </table>
 
 <br />
