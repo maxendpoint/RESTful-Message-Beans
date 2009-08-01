@@ -1,17 +1,7 @@
 <h1>Listing listeners</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Status</th>
-      <th>Key</th>
-      <th>Pid</th>
-      <th>Subscriber url</th>
-      <th>Receiver login url</th>
-      <th>Receiver delivery url</th>
-    </tr>
-  </thead>
-  
+  <%= generate_heads(%w{Status Key Pid Subscriber-url Receiver-login-url Receiver-delivery-url Show Edit Destroy}) %>
   <tbody>
     <%= render(:partial => "listener", :collection => @listeners) %>
   </tbody>

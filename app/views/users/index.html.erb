@@ -1,11 +1,7 @@
 <h1>Listing users</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
+  <%= generate_heads(%w{Name Show Edit Destroy}) %>
   <tbody>
     <%= render(:partial => "user", :collection => @users) %>
   </tbody>

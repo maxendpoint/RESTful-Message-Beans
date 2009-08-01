@@ -1,14 +1,7 @@
 <h1>Listing documents</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Destination</th>
-      <th>Content Length</th>
-      <th>Data</th>
-    </tr>
-  </thead>
+  <%= generate_heads(%w{Key Destination Length Data Show Destroy}) %>
   <tbody>
     <%= render(:partial => "document", :collection => @documents) %>
   </tbody>
